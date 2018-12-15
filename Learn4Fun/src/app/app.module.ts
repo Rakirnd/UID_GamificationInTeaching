@@ -12,6 +12,7 @@ import { QaComponent } from './qa/qa.component';
 import { FooterComponent } from './footer/footer.component';
 
 import { ReactiveFormsModule } from '@angular/forms';
+import { FunfactComponent } from './funfact/funfact.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     TutorialsComponent,
     QuizzesComponent,
     QaComponent,
-    FooterComponent
+    FooterComponent,
+    FunfactComponent
   ],
   imports: [
     BrowserModule,

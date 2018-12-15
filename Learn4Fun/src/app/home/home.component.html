@@ -1,6 +1,171 @@
-<h1 [ngClass]="{
-  'gray':h1Style,
-  'large':!h1Style
-}">Home</h1>
+<div class="page-home">
 
-<button (click)="firstClick()">Click Me!</button>
+  <div class="page-home-head">
+    <div class="page-home-bg" [ngStyle]="{ 'background-image': fireFoxFunFact }"></div>
+
+    <div class="Panel-box">
+      <div class="Panel-content">
+        <div class="Panel-title"
+             [ngStyle]="{ 'font-size': '3em', 'left': '35%' }">{{funFactMessage1}}</div>
+        <div class="Panel-title"
+             [ngStyle]="{ 'font-size': '2em', 'top': '15%' }">{{funFactMessage2}}</div>
+        <div class="Panel-title"
+             [ngStyle]="{ 'font-size': '2em', 'top': '30%', 'left': '7%'}">{{funFactMessage3}}</div>
+        <div class="Panel-buttons" [ngStyle]="{ 'left': '38%', 'bottom': '25%'}">
+
+          <a class="link" routerLink="/funfact">
+            <div class="Button-outer">
+              <div class="Button-label">Learn More!</div>
+            </div>
+          </a>
+
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+  <div class="page-home-section">
+
+    <div class="Panel">
+      <div class="Panel-bg" [ngStyle]="{ 'background-image': joinCommunityImage, 'filter': 'blur(0)' }"></div>
+
+      <a class="link" routerLink="/tutorials">
+        <div class="Panel-area">
+          <div class="Panel-box">
+            <div class="Panel-content">
+              <div class="Panel-title"
+                   [ngStyle]="{ 'font-size': '3.5em', 'top': '10%', 'left': '15%' }">{{joinCommunityMessage1}}</div>
+              <div class="Panel-title"
+                   [ngStyle]="{ 'font-size': '2.5em', 'bottom': '25%', 'left': '25%' }">{{joinCommunityMessage2}}</div>
+            </div>
+          </div>
+        </div>
+      </a>
+
+    </div>
+
+  </div>
+
+  <div class="Panel">
+    <div class="Panel-bg" [ngStyle]="{ 'background-image': answerImage}"></div>
+
+    <a class="link" routerLink="/qa">
+      <div class="Panel-area">
+        <div class="Panel-box">
+          <div class="Panel-content">
+            <div class="Panel-title"
+                 [ngStyle]="{ 'font-size': '2.5em', 'top': '5%', 'left': '0' }">{{answerMessage1}}</div>
+            <div class="Panel-title"
+                 [ngStyle]="{ 'font-size': '2.5em', 'top': '25%', 'left': '10%' }">{{answerMessage2}}</div>
+            <div class="Panel-title"
+                 [ngStyle]="{ 'font-size': '2.5em', 'bottom': '25%', 'left': '45%' }">{{answerMessage3}}</div>
+          </div>
+        </div>
+      </div>
+    </a>
+
+  </div>
+
+
+  <div class="Panel">
+    <div class="Panel-bg" [ngStyle]="{ 'background-image': testKnowledgeImage }"></div>
+
+    <a class="link" routerLink="/quizzes">
+      <div class="Panel-area">
+        <div class="Panel-box">
+          <div class="Panel-content">
+            <div class="Panel-title" [ngStyle]="{ 'font-size': '2.5em'}">{{testKnowledgeMessage}}</div>
+          </div>
+        </div>
+      </div>
+    </a>
+
+  </div>
+
+  <div class="page-home-section">
+    <div class="Panel">
+      <div class="Panel-bg" [ngStyle]="{ 'background-image': tutorialImage, 'filter': 'blur(0px)'}"></div>
+
+      <a class="link" routerLink="/tutorials">
+        <div class="Panel-area">
+          <div class="Panel-box">
+            <div class="Panel-content">
+              <div class="Panel-title"
+                   [ngStyle]="{ 'color': 'rgba(25,54,84,1)', 'font-size': '3.5em', 'top': '10%', 'left': '10%' }">{{learningMessage1}}</div>
+              <div class="Panel-title"
+                   [ngStyle]="{ 'color': 'rgba(139,214,0,1)', 'font-size': '2.5em', 'bottom': '15%', 'left': '30%' }">{{learningMessage2}}</div>
+            </div>
+          </div>
+        </div>
+      </a>
+
+    </div>
+  </div>
+  <div class="Panel">
+    <div class="Panel-bg" [ngStyle]="{ 'background-image': helpImage}"></div>
+
+    <div class="Panel-area">
+      <div class="Panel-box">
+        <div class="Panel-content">
+          <div class="Panel-title"
+               [ngStyle]="{ 'color': 'black', 'font-size': '3em'}">{{helpMessage}}</div>
+          <div class="Panel-buttons" [ngStyle]="{ 'left': splitLeft}">
+
+            <a class="link" routerLink="/tutorials">
+              <div class="Button-outer">
+                <div class="Button-label">Create A Tutorial!</div>
+              </div>
+            </a>
+
+            <a class="link" routerLink="/qa">
+              <div class="Button-outer">
+                <div class="Button-label">Answer A Question!</div>
+              </div>
+            </a>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="Panel">
+    <div class="Panel-bg" [ngStyle]="{ 'background-image': achievementImage, 'filter': 'blur(0)'}"></div>
+
+    <a class="link" routerLink="/tutorials">
+      <div class="Panel-area">
+        <div class="Panel-box">
+          <div class="Panel-content">
+            <div class="Panel-title"
+                 [ngStyle]="{ 'color': 'rgba(84,87,92,1)', 'top': '5%' }">{{achievementMessage1}}</div>
+            <div class="Panel-title"
+                 [ngStyle]="{ 'color': 'rgba(18,111,126,1)', 'font-size': '2em', 'bottom': '10%'}">{{achievementMessage2}}</div>
+          </div>
+        </div>
+      </div>
+    </a>
+
+  </div>
+
+  <div class="page-home-section">
+    <div class="Panel">
+      <div class="Panel-bg" [ngStyle]="{ 'background-image': feedbackImage, 'filter': 'blur(0)'}"></div>
+
+      <a class="link" routerLink="/contact">
+        <div class="Panel-area">
+          <div class="Panel-box">
+            <div class="Panel-content">
+              <div class="Panel-title"
+                   [ngStyle]="{ 'color': 'rgba(67,41,24,1)', 'top': '10%', 'left': '15%'}">{{feedbackMessage}}</div>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+  </div>
+
+</div>
+

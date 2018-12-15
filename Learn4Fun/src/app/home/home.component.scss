@@ -1,6 +1,116 @@
-.gray{
-  color:gray;
+.page-home {
+
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-gap: 4px;
+  background-color: black;
+
 }
-.large{
-  font-size: 20em;
+
+.page-home-head {
+
+  display: block;
+  position: relative;
+  overflow: hidden;
+  height: 750px;
+  grid-column-start: 1;
+  grid-column-end: 3;
+
+}
+
+.page-home-section {
+
+  grid-column-start: 1;
+  grid-column-end: 3;
+
+}
+
+.page-home-bg {
+
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+
+}
+
+.Panel {
+
+  display: block;
+  position: relative;
+  overflow: hidden;
+
+}
+
+.Panel-bg {
+
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+
+}
+
+.Panel-area {
+
+  position:relative;
+  max-width: 1600px;
+  margin: 0 auto;
+  height: 450px;
+
+}
+
+.Panel-box {
+
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 10%;
+  left: 10%;
+
+}
+
+.Panel-title {
+
+  position: absolute;
+  font-weight: 500;
+  text-align: center;
+  font-size: 3em;
+  line-height: 1.5em;
+  color: #ffffff;
+  text-shadow: 0 0 1px transparent,0 0 5px rgba(0,0,0,.8);
+
+}
+
+.Panel-buttons{
+
+  position: absolute;
+  bottom: 10%;
+
+}
+
+.Button-outer {
+
+  background: rgba(83,102,144,.6);
+  border: 1px solid rgba(214,199,196,1);
+  border-radius: 5px 5px 5px 5px;
+  padding: 12px 30px;
+  text-align: center;
+  width: 220px;
+  line-height: 1.5em;
+  font-weight: 400;
+  color: rgba(214,199,196,1);
+  text-transform: uppercase;
+  margin: 0 0 20px 0;
+
 }
