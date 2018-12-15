@@ -1,0 +1,53 @@
+.list{
+    height: 4.5cm;
+    width: 80%;
+    margin: 0 auto;
+    padding: 0.3cm;
+    margin-bottom: 1cm;
+    background-color: gray;
+}
+
+.list_presentation{
+    width: 100%;
+    height: 3cm;
+    display: flex; 
+    flex-direction: row;
+}
+
+.list_image{
+    width: 35%;
+    height: 100%;
+    display: flex; 
+    flex-direction: row;
+}
+
+.list_text{
+    display: flex;
+    flex-direction: column;
+}
+
+.list_title{
+    height: 65%;
+    width: 100%;
+    font-size: 35pt;
+    font-weight: bold;
+}
+
+.list_description{
+    height: 35%;
+    width: 100%;
+    font-size: 20pt;
+}
+
+.tags{
+    display: flex;
+    flex-direction: row;
+}
+
+.tag{
+    background-color: lightseagreen;
+    color: blue;
+    display: inline-block;
+    margin: 0.5cm;
+}
+
