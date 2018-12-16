@@ -10,6 +10,7 @@ import { TutorialsComponent } from './tutorials/tutorials.component';
 import { QuizzesComponent } from './quizzes/quizzes.component';
 import { QaComponent } from './qa/qa.component';
 import { FooterComponent } from './footer/footer.component';
+import {SlideshowModule} from 'ng-simple-slideshow';
 
 import { ReactiveFormsModule } from '@angular/forms';
 import { FunfactComponent } from './funfact/funfact.component';
@@ -29,7 +30,8 @@ import { FunfactComponent } from './funfact/funfact.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    SlideshowModule
   ],
   providers: [],
   bootstrap: [AppComponent]

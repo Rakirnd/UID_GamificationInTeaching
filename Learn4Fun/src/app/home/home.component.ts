@@ -1,4 +1,5 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, OnInit, ViewChild} from '@angular/core';
+import {IImage} from 'ng-simple-slideshow';
 
 @Component({
   selector: 'app-home',
@@ -6,6 +7,8 @@ import {Component, OnInit} from '@angular/core';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
+
+  @ViewChild('slideshow') slideshow: any;
 
   // images
   redPandaImage = 'url(../../assets/images/red-panda.jpg)';
@@ -44,13 +47,81 @@ export class HomeComponent implements OnInit {
   funFactMessage1 = 'Did You Know?';
   funFactMessage2 = 'The English word for red panda is “Firefox” which is where the browser gets its name from – ';
   funFactMessage3 = 'this means the Firefox logo is actually a red panda, not a fox!';
-  // button messages
+
+  // main page slides
+  welcomeSlide = new HomePageSlideShowComponent(
+    '../../assets/images/Welcome01.jpg',
+    'Learn4Fun',
+    [''],
+    'Join Us!',
+    [0, 0, 0, 0],
+    [],
+    [38, 80, 62, 20]);
+  funFactSlide = new HomePageSlideShowComponent(
+    '../../assets/images/FirefoxFunFact02.JPG',
+    this.funFactMessage1,
+    [this.funFactMessage2, this.funFactMessage3],
+    'Learn More!',
+    [0, 0, 0, 0],
+    [0, 15, 0, 85, 0, 30, 0, 60],
+    [38, 80, 62, 20]);
+  feedbackSlide = new HomePageSlideShowComponent(
+    '../../assets/images/feedback02.jpg',
+    'Something Amiss?',
+    ['Make Sure You Tell Us!'],
+    'Over Here!',
+    [0, 0, 0, 0],
+    [0, 15, 0, 85],
+    [38, 80, 62, 20]);
+
+  // slides wrapper
+  slides = [this.welcomeSlide, this.funFactSlide, this.feedbackSlide];
+
+  // slide show urls
+  images: (string | IImage)[] = [
+    this.welcomeSlide.imageUrl,
+    this.funFactSlide.imageUrl,
+    this.feedbackSlide.imageUrl
+  ];
 
 
   constructor() {
   }
 
   ngOnInit() {
+  }
+
+}
+
+export class HomePageSlideShowComponent {
+
+  imageUrl: string;
+
+  imageTitle: string;
+  titleRelativePercentages: number[]; // left-top-right-bottom
+
+  imageContent: string[];
+  contentRelativePercentages: number[]; // left-top-right-bottom
+
+  buttonText: string;
+  buttonRelativePercentages: number[];
+
+  constructor(url: string,
+              title: string,
+              content: string[],
+              bText: string,
+              titleRelativePercentages: number[],
+              contentRelativePercentages: number[],
+              buttonRelativePercentages: number[]) {
+
+    this.imageUrl = url;
+    this.imageTitle = title;
+    this.imageContent = content;
+    this.buttonText = bText;
+    this.titleRelativePercentages = titleRelativePercentages;
+    this.contentRelativePercentages = contentRelativePercentages;
+    this.buttonRelativePercentages = buttonRelativePercentages;
+
   }
 
 }

@@ -1,21 +1,43 @@
 <div class="page-home">
 
   <div class="page-home-head">
-    <div class="page-home-bg" [ngStyle]="{ 'background-image': fireFoxFunFact }"></div>
+
+    <slideshow #slideshow [autoPlay]="true"
+               [autoPlayInterval]="5000"
+               [imageUrls]="images"
+               [showDots]="true"
+               [lazyLoad]="images?.length > 1"
+               [autoPlayWaitForLazyLoad]="true"></slideshow>
 
     <div class="Panel-box">
       <div class="Panel-content">
         <div class="Panel-title"
-             [ngStyle]="{ 'font-size': '3em', 'left': '35%' }">{{funFactMessage1}}</div>
+             [ngStyle]="{ 'font-size': '3em',
+             'left': slides[slideshow.slideIndex].titleRelativePercentages[0] + '%',
+             'top': slides[slideshow.slideIndex].titleRelativePercentages[1] + '%',
+             'right': slides[slideshow.slideIndex].titleRelativePercentages[2] + '%',
+             'bottom': slides[slideshow.slideIndex].titleRelativePercentages[3] + '%'}">{{slides[slideshow.slideIndex].imageTitle}}</div>
         <div class="Panel-title"
-             [ngStyle]="{ 'font-size': '2em', 'top': '15%' }">{{funFactMessage2}}</div>
+             [ngStyle]="{ 'font-size': '2em',
+             'left': slides[slideshow.slideIndex].contentRelativePercentages[0] + '%',
+             'top': slides[slideshow.slideIndex].contentRelativePercentages[1] + '%',
+             'right': slides[slideshow.slideIndex].contentRelativePercentages[2] + '%',
+             'bottom': slides[slideshow.slideIndex].contentRelativePercentages[3] + '%'}">{{slides[slideshow.slideIndex].imageContent[0]}}</div>
         <div class="Panel-title"
-             [ngStyle]="{ 'font-size': '2em', 'top': '30%', 'left': '7%'}">{{funFactMessage3}}</div>
-        <div class="Panel-buttons" [ngStyle]="{ 'left': '38%', 'bottom': '25%'}">
+             [ngStyle]="{ 'font-size': '2em',
+             'left': slides[slideshow.slideIndex].contentRelativePercentages[4] + '%',
+             'top': slides[slideshow.slideIndex].contentRelativePercentages[5] + '%',
+             'right': slides[slideshow.slideIndex].contentRelativePercentages[6] + '%',
+             'bottom': slides[slideshow.slideIndex].contentRelativePercentages[7] + '%'}">{{slides[slideshow.slideIndex].imageContent[1]}}</div>
+        <div class="Panel-buttons" [ngStyle]="{
+             'left': slides[slideshow.slideIndex].buttonRelativePercentages[0] + '%',
+             'top': slides[slideshow.slideIndex].buttonRelativePercentages[1] + '%',
+             'right': slides[slideshow.slideIndex].buttonRelativePercentages[2] + '%',
+             'bottom': slides[slideshow.slideIndex].buttonRelativePercentages[3] + '%'}">
 
           <a class="link" routerLink="/funfact">
             <div class="Button-outer">
-              <div class="Button-label">Learn More!</div>
+              <div class="Button-label">{{slides[slideshow.slideIndex].buttonText}}</div>
             </div>
           </a>
 
