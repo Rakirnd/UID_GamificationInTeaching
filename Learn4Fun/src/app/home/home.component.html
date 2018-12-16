@@ -35,7 +35,7 @@
              'right': slides[slideshow.slideIndex].buttonRelativePercentages[2] + '%',
              'bottom': slides[slideshow.slideIndex].buttonRelativePercentages[3] + '%'}">
 
-          <a class="link" routerLink="/funfact">
+          <a class="link" routerLink={{slides[slideshow.slideIndex].hyperlink}}>
             <div class="Button-outer">
               <div class="Button-label">{{slides[slideshow.slideIndex].buttonText}}</div>
             </div>

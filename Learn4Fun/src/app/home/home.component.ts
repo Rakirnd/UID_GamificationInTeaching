@@ -56,7 +56,8 @@ export class HomeComponent implements OnInit {
     'Join Us!',
     [0, 0, 0, 0],
     [],
-    [38, 80, 62, 20]);
+    [38, 80, 62, 20],
+    '/');
   funFactSlide = new HomePageSlideShowComponent(
     '../../assets/images/FirefoxFunFact02.JPG',
     this.funFactMessage1,
@@ -64,7 +65,8 @@ export class HomeComponent implements OnInit {
     'Learn More!',
     [0, 0, 0, 0],
     [0, 15, 0, 85, 0, 30, 0, 60],
-    [38, 80, 62, 20]);
+    [38, 80, 62, 20],
+    '/funfact');
   feedbackSlide = new HomePageSlideShowComponent(
     '../../assets/images/feedback02.jpg',
     'Something Amiss?',
@@ -72,7 +74,8 @@ export class HomeComponent implements OnInit {
     'Over Here!',
     [0, 0, 0, 0],
     [0, 15, 0, 85],
-    [38, 80, 62, 20]);
+    [38, 80, 62, 20],
+    '/contact');
 
   // slides wrapper
   slides = [this.welcomeSlide, this.funFactSlide, this.feedbackSlide];
@@ -106,13 +109,16 @@ export class HomePageSlideShowComponent {
   buttonText: string;
   buttonRelativePercentages: number[];
 
+  hyperlink: string;
+
   constructor(url: string,
               title: string,
               content: string[],
               bText: string,
               titleRelativePercentages: number[],
               contentRelativePercentages: number[],
-              buttonRelativePercentages: number[]) {
+              buttonRelativePercentages: number[],
+              hyperlink: string) {
 
     this.imageUrl = url;
     this.imageTitle = title;
@@ -121,6 +127,7 @@ export class HomePageSlideShowComponent {
     this.titleRelativePercentages = titleRelativePercentages;
     this.contentRelativePercentages = contentRelativePercentages;
     this.buttonRelativePercentages = buttonRelativePercentages;
+    this.hyperlink = hyperlink;
 
   }
 
