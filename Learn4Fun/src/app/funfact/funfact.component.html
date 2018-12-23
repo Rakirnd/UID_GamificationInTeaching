@@ -1,3 +1,49 @@
-<p>
-  funfact works!
-</p>
+<div class="body">
+
+    <div class="funfact" *ngFor="let funFact of funFacts">
+       
+        <div class="funfact_header">
+            <div class="funfact_logo">Fun Fact</div>
+            <div class="funfact_header_info">
+                <div class="funfact_title">{{funFact.title}}</div>
+                <div class="funfact_description">{{funFact.description}}</div>
+            </div>
+        </div>
+
+        <div class="funfact_body">
+            <div class="funfact_content">{{funFact.content}}</div>
+            <div class="funfact_visual">
+                <div class="funfact_images">
+                    <img id="funfact_image1" src={{funFact.imagePath[0]}} />
+                    <img id="funfact_image2" src={{funFact.imagePath[1]}} />
+                </div>
+                <iframe class="funfact_video" width="560" height="315" [src]='sanitizer.bypassSecurityTrustResourceUrl(funFact.videoURL)' frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
+
+        <div *ngFor="let comment of funFact.comments">
+            <div class="comment_main">
+                <div class="comment_userDetails">
+                    <img class="comment_pic" src="../../assets/images/funfact/user1.png" />
+                    <div class="comment_user">{{comment.username}}</div>
+                </div>
+                <div class="comment_text">{{comment.comment}}</div>
+            </div>
+
+            <div class="comment_reply" *ngFor="let reply of comment.replies">
+                <div class="comment_userDetails">
+                    <img class="comment_pic" src="../../assets/images/funfact/user1.png" />
+                    <div class="comment_user">{{reply.username}}</div>
+                </div>
+                <div class="comment_text">{{reply.comment}}</div>
+            </div>
+        </div>
+
+        <div class="tags">
+            <div class="tag" *ngFor="let tag of funFact.tags"> {{tag}} </div>
+        </div>
+
+    </div>
+
+
+</div>

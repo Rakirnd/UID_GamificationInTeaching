@@ -1,0 +1,137 @@
+.funfact {
+    border: 3px solid black;
+    background: #59514c;
+    margin: 5px auto;
+}
+
+.funfact_header {
+    display: flex;
+    flex-direction: row;
+    width: 95%;
+    height: 15%;
+    margin: 5px 5px 20px 5px;
+}
+
+.funfact_logo {
+    width:25%;
+    height:100%;
+    color: #efc87c;
+    font-size: 66px;
+    font-family:Broadway;
+    text-align:center;
+}
+
+.funfact_header_info {
+    width: 75%;
+}
+
+.funfact_title {
+    width: 100%;
+    font-size: 72px;
+    text-align:center;
+    color: #7fbbbf;
+    font-weight: bold;
+}
+
+.funfact_description {
+    width: 100%;
+    font-size: 18px;
+    font-style: italic;
+    text-align:center;
+    color: #7fbbbf;
+}
+
+.funfact_body {
+    display: flex;
+    flex-direction: row;
+    width: 99%;
+    height: 40%;
+    margin: 5px 5px 20px 5px;
+    margin-bottom: 50px;
+}
+
+.funfact_content{
+    width: 50%;
+    font-size: 18px;
+    text-align:justify;
+    margin-right: 10px;
+    color: #ebe1bf;
+}
+
+.funfact_visual {
+    width: 50%;
+}
+
+.funfact_images {
+    width: 100%;
+    height: 40%;
+    margin: 0px 0px 20px 0px;
+}
+
+#funfact_image1 {
+    width: 48%;
+    float: left;
+    height: 100%;
+}
+
+#funfact_image2 {
+    width: 48%;
+    float: right;
+    height: 100%;
+}
+
+.funfact_video {
+    width: 100%;
+    height: 60%;
+}
+
+.tags {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 5%;
+    margin-bottom: 20px;
+}
+
+.comment_main {
+    display: flex;
+    flex-direction: row;
+    width: 60%;
+    margin-left: 5px;
+    border-radius: 25px;
+    border: 3px solid white;
+    margin-bottom: 20px;
+    background: #a4a09d;
+}
+
+.comment_reply {
+    display: flex;
+    flex-direction: row;
+    width: 60%;
+    margin-left: 100px;
+    border-radius: 25px;
+    border: 3px solid white;
+    margin-bottom: 20px;
+    background: #a4a09d;
+}
+
+.comment_userDetails {
+    width: 15%;
+    height: 100%;
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.comment_pic {
+    width:100%;
+    height: 100%;
+}
+
+.comment_user {
+    color: #43241f;
+    font-weight: bold;
+}
+
+.comment_text {
+    font-size: 22px;
+}
