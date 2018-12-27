@@ -14,6 +14,8 @@ import {SlideshowModule} from 'ng-simple-slideshow';
 
 import { ReactiveFormsModule } from '@angular/forms';
 import { FunfactComponent } from './funfact/funfact.component';
+import { PersonalProfileComponent } from './personal-profile/personal-profile.component';
+import { GlobalRankingComponent } from './global-ranking/global-ranking.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +27,9 @@ import { FunfactComponent } from './funfact/funfact.component';
     QuizzesComponent,
     QaComponent,
     FooterComponent,
-    FunfactComponent
+    FunfactComponent,
+    PersonalProfileComponent,
+    GlobalRankingComponent
   ],
   imports: [
     BrowserModule,

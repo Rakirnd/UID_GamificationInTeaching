@@ -6,6 +6,8 @@ import {TutorialsComponent} from './tutorials/tutorials.component';
 import {QuizzesComponent} from './quizzes/quizzes.component';
 import {QaComponent} from './qa/qa.component';
 import {FunfactComponent} from './funfact/funfact.component';
+import {PersonalProfileComponent} from './personal-profile/personal-profile.component';
+import {GlobalRankingComponent} from './global-ranking/global-ranking.component';
 
 const routes: Routes = [
   {path: '', component: HomeComponent},
@@ -13,7 +15,9 @@ const routes: Routes = [
   {path: 'tutorials', component: TutorialsComponent},
   {path: 'quizzes', component: QuizzesComponent},
   {path: 'qa', component: QaComponent},
-  {path: 'contact', component: ContactComponent}
+  {path: 'contact', component: ContactComponent},
+  {path: 'personal-profile', component: PersonalProfileComponent},
+  {path: 'global-ranking', component: GlobalRankingComponent}
 ];
 
 @NgModule({
