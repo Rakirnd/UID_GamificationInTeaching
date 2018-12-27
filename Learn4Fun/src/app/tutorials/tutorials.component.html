@@ -1,3 +1,40 @@
-<p>
-  tutorials works!
-</p>
+<div class="button_add_div">
+  <button class="add_button">Add a new Tutorial!</button>
+</div>
+
+<div class="body">
+
+  <div class="list">
+
+    <div class="list_presentation">
+      <div class="list_image">
+        <img alt="" src="../../assets/images/cap.png"/>
+      </div>
+
+      <div class="list_text">
+        <div class="list_title">{{javaTutorial.title}}</div>
+        <div class="list_description">{{javaTutorial.description}}</div>
+      </div>
+    </div>
+
+    <div class="list_bottom">
+      <div class="tags">
+        <div class="tag">{{javaTutorial.tags[0]}}</div>
+        <div class="tag">{{javaTutorial.tags[1]}}</div>
+      </div>
+
+      <div class="feedback">
+        <div class="likes" [ngStyle]="{ 'background-image': likeImage, 'background-size': '85%'}">
+          <button class="feedbackButton" (click)="increaseLikes(javaTutorial)"></button>
+        </div>
+        <div class="count">{{javaTutorial.likeCount}}</div>
+
+        <div class="likes" [ngStyle]="{ 'background-image': dislikeImage }">
+          <button class="feedbackButton" (click)="increaseDislikes(javaTutorial)"></button>
+        </div>
+        <div class="count">{{javaTutorial.dislikeCount}}</div>
+      </div>
+    </div>
+
+  </div>
+</div>

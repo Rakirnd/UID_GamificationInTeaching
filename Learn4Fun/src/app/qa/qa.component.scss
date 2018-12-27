@@ -1,0 +1,130 @@
+.body{
+    width: 64%;
+    margin: 0 auto;
+  }
+  
+  .list{
+    height: 4.5cm;
+    margin-bottom: 1cm;
+    background-color: gray;
+  }
+  
+  .list_presentation{
+    width: 100%;
+    height: 70%;
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .list_image{
+    width: 25%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .list_text{
+    width: 75%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .list_title{
+    height: 55%;
+    width: 100%;
+    font-size: 2em;
+    font-weight: bold;
+  }
+  
+  .list_description{
+    display: flex;
+    height: 35%;
+    width: 100%;
+    font-size: 1.5em;
+  }
+  
+  .list_bottom{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 30%;
+  }
+  
+  .tags{
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    width: 70%;
+  }
+  
+  .tag{
+    background-color: lightseagreen;
+    color: blue;
+    display: inline-block;
+    padding: 10px;
+    border: 2px solid lightseagreen;
+    border-radius: 25px;
+    margin: 0 0 0 15px;
+    height: 30%;
+  }
+  
+  .feedback{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    font-size: 15pt;
+    font-weight: bold;
+    height: 100%;
+    width: 30%;
+  }
+  
+  .likes {
+  
+    display: flex;
+    width: 50px;
+    height: 45px;
+    border: 0;
+    background-size: 95%;
+    background-repeat: no-repeat;
+  
+  }
+  
+  .feedbackButton {
+  
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0);
+    border: 0;
+  
+  }
+  
+  .count{
+    margin: 0 30px 0 10px;
+    display: flex;
+  }
+  
+  .add_button{
+  
+    background-color: green;
+    border: 2px solid green;
+    border-radius: 25px;
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 15pt;
+    overflow: hidden;
+    margin: 0 50px 0 0;
+  
+  }
+  
+  .button_add_div {
+    margin: 1cm 0 1cm 0;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .button_answer_div {
+    display: flex;
+    justify-content: flex-start;
+  }
+  
