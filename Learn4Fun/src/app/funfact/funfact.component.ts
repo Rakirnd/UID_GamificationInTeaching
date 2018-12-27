@@ -60,7 +60,10 @@ export class FunFact {
     comments: Comment[];
     likes: number;
     dislikes: number;
+
     messageForm: FormGroup;
+    submittedComment: boolean = false;
+    successComment: boolean = false;
 
     constructor(messageForm : FormGroup, title: string, description: string, content: string, imagePath: string[], tags: string[], videoURL: string, comments: Comment[]) {
         this.title = title;
@@ -76,7 +79,23 @@ export class FunFact {
     }
 
     onSubmit() {
+        this.submittedComment = true;
+        this.successComment = false;
+        if (this.messageForm.invalid) {
+            return;
+        }
+
         this.comments.push(new Comment("User", this.messageForm.controls.message.value, []));
+        this.messageForm.controls.message.setValue('');
+
+        this.successComment = true;
+        this.submittedComment = false;
+    }
+
+    enterPressed(event) {
+        if (event.keyCode == 13) {
+            this.onSubmit();
+        }
     }
 
     increaseLikes() {

@@ -58,13 +58,16 @@
             </div>
         </div>
 
-        <form [formGroup]="funFact.messageForm" (ngSubmit)="funFact.onSubmit()">
-            <label>
-                Message:
+        <form class="funfact_comment_form" [formGroup]="funFact.messageForm" (ngSubmit)="funFact.onSubmit()" (keydown)="funFact.enterPressed($event)">
+            <label class="comment_message">
+                Insert your comment below:
                 <textarea formControlName="message"></textarea>
             </label>
-
-            <input type="submit" value="Post comment" />
+            <div *ngIf="funFact.submittedComment && funFact.messageForm.controls.message.errors" class="funfact_comment_submit_error">
+                <div *ngIf="funFact.messageForm.controls.message.errors.required">Error! Empty comment not allowed!</div>
+            </div>
+            <div class="funfact_comment_submit_success" *ngIf="funFact.successComment">Comment sent!</div>
+            <input type="submit" value="Post comment" class="funfact_comment_submit_btn" />
         </form>
     </div>
 
