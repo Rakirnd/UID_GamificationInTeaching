@@ -21,6 +21,25 @@
             </div>
         </div>
 
+        <div class="funfact_footer">
+            <div class="funfact_feedback">
+                <div class="funfact_likes" [ngStyle]="{ 'background-image': likeImage, 'background-size': '85%'}">
+                    <button class="feedbackButton" (click)="funFact.increaseLikes()"></button>
+                </div>
+                <div class="count">{{funFact.likes}}</div>
+
+                <div class="funfact_likes" [ngStyle]="{ 'background-image': dislikeImage }">
+                    <button class="feedbackButton" (click)="funFact.increaseDislikes()"></button>
+                </div>
+                <div class="count">{{funFact.dislikes}}</div>
+
+            </div>
+
+            <div class="tags">
+                <div class="tag" *ngFor="let tag of funFact.tags"> {{tag}} </div>
+            </div>
+        </div>
+
         <div *ngFor="let comment of funFact.comments">
             <div class="comment_main">
                 <div class="comment_userDetails">
@@ -39,10 +58,14 @@
             </div>
         </div>
 
-        <div class="tags">
-            <div class="tag" *ngFor="let tag of funFact.tags"> {{tag}} </div>
-        </div>
+        <form [formGroup]="funFact.messageForm" (ngSubmit)="funFact.onSubmit()">
+            <label>
+                Message:
+                <textarea formControlName="message"></textarea>
+            </label>
 
+            <input type="submit" value="Post comment" />
+        </form>
     </div>
 
 
