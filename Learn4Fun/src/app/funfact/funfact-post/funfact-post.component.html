@@ -1,0 +1,60 @@
+<div class="body">
+
+    <form class="funfact_form" [formGroup]="funfactForm" (ngSubmit)="onSubmit()">
+        <div class="funfact_header">
+            <div class="funfact_logo">Fun Fact</div>
+            <div class="funfact_header_info">
+                <label>
+                    Title:
+                    <div *ngIf="submitted && funfactForm.controls.title.errors" class="funfact_posting_error">
+                        <div *ngIf="funfactForm.controls.title.errors.required">Title of the fun fact is missing!</div>
+                    </div>
+                    <input type="text" class="funfact_title inputField" formControlName="title" />
+                </label>
+
+                <label>
+                    Description:
+                    <div *ngIf="submitted && funfactForm.controls.description.errors" class="funfact_posting_error">
+                        <div *ngIf="funfactForm.controls.description.errors.required">Description of the fun fact is missing!</div>
+                    </div>
+                    <textarea formControlName="description" class="funfact_description inputField"></textarea>
+                </label>
+            </div>
+        </div>
+
+        <div class="contentSection">
+            <label>
+                Content:
+                <div *ngIf="submitted && funfactForm.controls.content.errors" class="funfact_posting_error">
+                    <div *ngIf="funfactForm.controls.content.errors.required">Content of the fun fact is missing!</div>
+                </div>
+                <textarea formControlName="content" class="contentTextArea inputField"></textarea>
+            </label>
+        </div>
+
+        <div class="postingArea">
+            <label>
+                Images:
+                <input type="file" formControlName="image1" />
+                <input type="file" />
+            </label>
+        </div>
+
+        <div class="postingArea">
+            <label>
+                Video:
+                <input type="text" formControlName="videoURL" class="inputField" />
+            </label>
+        </div>
+
+        <div class="postingArea">
+            <label>
+                Tags :
+                <input type="text" formControlName="tags" class="inputField" />
+            </label>
+        </div>
+
+        <input type="submit" value="Post FunFact" />
+    </form>
+
+</div>

@@ -1,0 +1,39 @@
+.funfact_form {
+    background: #59514c;
+    border: 3px solid black;
+    margin: 5px auto;
+    margin-bottom: 25px;
+}
+
+.inputField {
+    background: #59514c;
+    border: 3px solid white;
+    font-family: 'Comic Sans MS';
+    resize: none;
+}
+
+.contentSection {
+    width: 95%;
+    margin-left: 7px;
+}
+
+.contentTextArea {
+    width: 100%;
+    font-size: 18px;
+    text-align:justify;
+    color: #ebe1bf;
+    margin-bottom: 20px;
+}
+
+.postingArea {
+    width: 95%;
+    margin-left: 7px;
+    margin-bottom: 20px;
+}
+
+.funfact_posting_error{
+    background: #FFFF33;
+    padding: .5em;
+    font-size: 12px;
+    width: 33%;
+}

@@ -1,5 +1,7 @@
 <div class="body">
 
+    <a routerLink="/funfact-post">Post a Fun Fact</a>
+
     <div class="funfact" *ngFor="let funFact of funFacts">
        
         <div class="funfact_header">
@@ -63,10 +65,9 @@
                 Insert your comment below:
                 <textarea formControlName="message"></textarea>
             </label>
-            <div *ngIf="funFact.submittedComment && funFact.messageForm.controls.message.errors" class="funfact_comment_submit_error">
+            <div *ngIf="funFact.submittedComment && funFact.messageForm.controls.message.errors" class="funfact_submit_error">
                 <div *ngIf="funFact.messageForm.controls.message.errors.required">Error! Empty comment not allowed!</div>
             </div>
-            <div class="funfact_comment_submit_success" *ngIf="funFact.successComment">Comment sent!</div>
             <input type="submit" value="Post comment" class="funfact_comment_submit_btn" />
         </form>
     </div>

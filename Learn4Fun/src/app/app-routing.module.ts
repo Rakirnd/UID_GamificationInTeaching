@@ -8,10 +8,12 @@ import {QaComponent} from './qa/qa.component';
 import {FunfactComponent} from './funfact/funfact.component';
 import {PersonalProfileComponent} from './personal-profile/personal-profile.component';
 import {GlobalRankingComponent} from './global-ranking/global-ranking.component';
+import { FunfactPostComponent } from './funfact/funfact-post/funfact-post.component';
 
 const routes: Routes = [
   {path: '', component: HomeComponent},
-  {path: 'funfact', component: FunfactComponent},
+  { path: 'funfact', component: FunfactComponent },
+  { path: 'funfact-post', component: FunfactPostComponent },
   {path: 'tutorials', component: TutorialsComponent},
   {path: 'quizzes', component: QuizzesComponent},
   {path: 'qa', component: QaComponent},
