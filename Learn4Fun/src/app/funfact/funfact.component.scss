@@ -196,7 +196,7 @@
 }
 
 .funfact_comment_submit_btn {
-    background: #7fbbbf;
+    background: #9ACD32;
     border: none;
     color: white;
     text-transform: uppercase;
@@ -205,6 +205,10 @@
     cursor: pointer;
     align-content: center;
     font-family: 'Comic Sans MS';
+}
+
+.funfact_comment_submit_btn:hover {
+    background: yellow;
 }
 
 .funfact_submit_error {
@@ -219,4 +223,23 @@
     padding: .5em;
     font-size: 18px;
     margin-bottom: 20px;
+}
+
+.add_button{
+  display: flex;
+  justify-content: flex-end;
+  background-color: green;
+  border: 2px solid green;
+  border-radius: 25px;
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 15pt;
+  overflow: hidden;
+}
+
+.button_add_div {
+  margin-top: 1cm;
+  margin-bottom: 1cm;
+  margin-left: 0.5cm;
+  display: flex;
 }

@@ -28,10 +28,12 @@ export class FunfactPostComponent implements OnInit {
         });
 
         this.funfactForm = this.formBuilder.group({
-            title: ['', Validators.required],
+            title: ['', Validators.compose([Validators.required, Validators.minLength(5), Validators.pattern('^[a-zA-Z0-9]+$')])],
             description: ['', Validators.required],
-            content: ['', Validators.required],
-            videoURL: [''],
+            content: ['', Validators.compose([Validators.required, Validators.maxLength(800)])],
+            image1: [''],
+            image2: [''],
+            videoURL: ['', Validators.pattern('^(https?\:\/\/)?(www\.youtube\.com|youtu\.?be)\/.+$')],
             tags: ['']
         });
     }
@@ -51,11 +53,21 @@ export class FunfactPostComponent implements OnInit {
             this.funfactForm.controls.title.value,
             this.funfactForm.controls.description.value,
             this.funfactForm.controls.content.value,
-            ['../../assets/images/funfact/intel-cpu1.jpg', '../../assets/images/funfact/intel-cpu2.jpg'],
+            [this.funfactForm.controls.image1.value.replace('C:\\fakepath\\', '../../assets/images/'), this.funfactForm.controls.image2.value.replace('C:\\fakepath\\', '../../assets/images/')],
             this.funfactForm.controls.tags.value.split(' '),
             this.funfactForm.controls.videoURL.value.replace('watch?v=', 'embed/'),
             []
         ));
         this.router.navigate(['funfact']);
+    }
+
+    resetFields() {
+        this.funfactForm.controls.title.setValue('');
+        this.funfactForm.controls.description.setValue('');
+        this.funfactForm.controls.content.setValue('');
+        this.funfactForm.controls.tags.setValue('');
+        this.funfactForm.controls.videoURL.setValue('');
+        this.funfactForm.controls.image1.setValue('');
+        this.funfactForm.controls.image2.setValue('');
     }
 }
