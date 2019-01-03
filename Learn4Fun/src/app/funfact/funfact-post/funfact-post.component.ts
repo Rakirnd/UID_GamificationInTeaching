@@ -28,7 +28,7 @@ export class FunfactPostComponent implements OnInit {
         });
 
         this.funfactForm = this.formBuilder.group({
-            title: ['', Validators.compose([Validators.required, Validators.minLength(5), Validators.pattern('^[a-zA-Z0-9]+$')])],
+            title: ['', Validators.compose([Validators.required, Validators.minLength(5), Validators.pattern('^[a-zA-Z0-9 ]+$')])],
             description: ['', Validators.required],
             content: ['', Validators.compose([Validators.required, Validators.maxLength(800)])],
             image1: [''],
