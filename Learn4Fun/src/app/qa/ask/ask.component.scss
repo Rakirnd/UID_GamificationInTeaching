@@ -1,0 +1,147 @@
+.body{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin: auto;
+}
+
+.page_title{
+    display: flex;
+    flex-direction: column;
+    font-size: 25pt;
+    font-weight: strong;
+    margin: 0;
+    margin-top:15pt;
+    margin-bottom: 35pt;
+}
+.title{
+    display: flex;
+    flex-direction: column;
+    font-size: 20pt;
+    font-weight: strong;
+    margin: 0;
+}
+
+.title_input{
+    display: flex;
+    flex-direction: column;
+    font-size: 18pt;
+    font-weight: strong;
+    width: 100%;
+    height: 20pt;
+    margin: 0;
+    margin-bottom: 35pt;
+    margin-top: 10pt;
+}
+
+.q_body{
+    display: flex;
+    flex-direction: column;
+    font-size: 18pt;
+    height: 100%;
+    width: 100%;
+    font-weight: strong;
+    margin: 0;
+}
+
+.body_input{
+    display: flex;
+    flex-direction: column;
+    font-size: 15pt;
+    font-weight: strong;
+    width: 100%;
+    height: 105pt;
+    margin: 0;
+    margin-top:15pt;
+    margin-bottom: 25pt;
+}
+
+.tags{
+    display: flex;
+    flex-direction: column;
+    font-size: 15pt;
+    font-weight: strong;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+
+.add_tag{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+.tag_input{
+    height: 18pt;
+    width: 25%;
+    margin: 0;
+    margin-left: 15pt
+}
+.tag_btn{
+    background-color: green;
+    border: 2px solid green;
+    border-radius: 25px;
+    overflow: hidden;
+    margin: 0;
+    margin-left: 25pt;
+}
+.added_tags{
+    height: 100%;
+    width: 100%;
+    margin: 0;
+}
+.button_div{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    margin:auto;
+    justify-content: right;
+}
+
+.add_q_btn{
+    display: flex;
+    background-color: green;
+    border: 2px solid green;
+    border-radius: 30px;
+    font-size: 20pt;
+    overflow: hidden;
+    margin: 0;
+    margin-bottom: 35pt;
+    justify-content: center;
+    justify-self: flex-end;
+    width: 30%;
+}
+
+.body > p{
+    margin: 0;
+    padding: 0;
+}
+
+.page_title > p{
+    margin: 0;
+    padding: 0;
+}
+
+.title > p{
+    margin: 0;
+    padding: 0;
+}
+
+.add_tag > p {
+    margin: 0;
+    padding: 0;
+}
+
+.added_tags > p{
+    margin: 0;
+    margin-top: 5pt;
+    margin-bottom: 15pt;
+    padding: 0;
+}
+.q_body > p{
+    margin: 0;
+    padding: 0;
+}

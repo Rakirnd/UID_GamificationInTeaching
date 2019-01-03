@@ -9,6 +9,9 @@ import {FunfactComponent} from './funfact/funfact.component';
 import {PersonalProfileComponent} from './personal-profile/personal-profile.component';
 import {GlobalRankingComponent} from './global-ranking/global-ranking.component';
 import { FunfactPostComponent } from './funfact/funfact-post/funfact-post.component';
+import { AskComponent } from './qa/ask/ask.component';
+import { EditComponent } from './personal-profile/edit/edit.component';
+
 
 const routes: Routes = [
   {path: '', component: HomeComponent},
@@ -19,7 +22,9 @@ const routes: Routes = [
   {path: 'qa', component: QaComponent},
   {path: 'contact', component: ContactComponent},
   {path: 'personal-profile', component: PersonalProfileComponent},
-  {path: 'global-ranking', component: GlobalRankingComponent}
+  {path: 'global-ranking', component: GlobalRankingComponent},
+  {path: 'askk', component: AskComponent},
+  {path: 'edit', component: EditComponent}
 ];
 
 @NgModule({
