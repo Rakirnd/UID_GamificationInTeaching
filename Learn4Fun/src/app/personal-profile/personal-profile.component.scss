@@ -78,6 +78,26 @@
     margin-right: 1cm;
 }
 
+.edit_button{
+
+    background-color: green;
+    border: 2px solid green;
+    border-radius: 25px;
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 15pt;
+    overflow: hidden;
+    margin: 0 50px 0 0;
+  
+  }
+  
+  .button_edit_div {
+    margin: 1cm 0 1cm 0;
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+
 .award > h3{
     font-size: 0.7em;
     width: 100%;

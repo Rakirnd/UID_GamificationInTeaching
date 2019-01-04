@@ -17,6 +17,7 @@ export class PersonalProfileComponent implements OnInit {
 
 }
 
+
 export class PersonalProfile{
   name: string
   university: string;
