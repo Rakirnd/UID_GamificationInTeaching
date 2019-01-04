@@ -12,6 +12,7 @@ export class TutorialsService {
 
     tutorials = [];
     auxTutorials = [];
+    sessionTutorial;
     
     constructor() {
        this.tutorials = JSON.parse(localStorage.getItem("tutorials"));
@@ -40,6 +41,21 @@ export class TutorialsService {
         this.tutorials = JSON.parse(localStorage.getItem("tutorials"));
         console.log("Get tutorials: ", this.tutorials);
         return this.tutorials;
+    }
+
+    getSessionTutorial() {
+        this.sessionTutorial = JSON.parse(localStorage.getItem("sessionTutorial"));
+        return this.sessionTutorial;
+    }
+
+    setSessionTutorial(tutorial: Tutorial) {
+        this.sessionTutorial = tutorial;
+        localStorage.setItem("sessionTutorial", JSON.stringify(this.sessionTutorial));
+    }
+
+    clearSessionTutorial() {
+        this.sessionTutorial = null;
+        localStorage.removeItem("sessionTutorial");
     }
 
     addTutorial(tutorial: Tutorial) {

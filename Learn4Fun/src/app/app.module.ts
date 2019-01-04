@@ -23,6 +23,7 @@ import { AskComponent } from './qa/ask/ask.component';
 import { EditComponent } from './personal-profile/edit/edit.component';
 import { AddTutorialComponent } from './add-tutorial/add-tutorial.component';
 import { AddQuizComponent } from './add-quiz/add-quiz.component';
+import { AddStepsComponent } from './add-steps/add-steps.component';
 
 
 @NgModule({
@@ -42,7 +43,8 @@ import { AddQuizComponent } from './add-quiz/add-quiz.component';
     AskComponent,
     EditComponent,
     AddTutorialComponent,
-    AddQuizComponent
+    AddQuizComponent,
+    AddStepsComponent
   ],
   imports: [
     BrowserModule,

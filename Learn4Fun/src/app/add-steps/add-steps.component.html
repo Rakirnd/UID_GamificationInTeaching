@@ -1,0 +1,34 @@
+<div class="body">
+
+  <form class="" [formGroup]="addStepForm" (ngSubmit)="onSubmit()">
+      <div class="funfact_header">
+          <h3 class="funfact_logo">Step</h3>
+          <div class="funfact_header_info">
+              <label>
+                  Title:
+                  <div *ngIf="submitted && addStepForm.controls.title.errors" class="funfact_posting_error">
+                      <div *ngIf="addStepForm.controls.title.errors.required">Title of the step is missing!</div>
+                      <div *ngIf="addStepForm.controls.title.errors.minlength">Title too short!</div>
+                      <div *ngIf="addStepForm.controls.title.errors.pattern">Only alphanumerical characters are allowed!</div>
+                  </div>                  
+              </label>
+              <input type="text" class="funfact_title inputField" formControlName="title" />
+          </div>
+      </div>
+      <div class="contentSection">
+        <label>
+            Short description:
+            <div *ngIf="submitted && addStepForm.controls.shortDescription.errors" class="funfact_posting_error">
+                <div *ngIf="addStepForm.controls.shortDescription.errors.required">Short description of the step is missing!</div>
+                <div *ngIf="addStepForm.controls.shortDescription.errors.maxlength">Short description can have max 800 characters!</div>
+            </div>
+            <textarea formControlName="shortDescription" class="textField inputField"></textarea>
+        </label>
+    </div>
+
+      <div class="funfact-post-btns">
+          <input type="button" value="ADD ANOTHER STEP" (click)="redirectToAddAnotherStep()" class="post_funfact_btn" />          
+          <input type="submit" value="DONE" class="post_funfact_btn" />
+      </div>
+  </form>
+</div>

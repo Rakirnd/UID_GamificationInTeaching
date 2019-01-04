@@ -38,19 +38,39 @@ export class AddTutorialComponent implements OnInit {
             videoURL: ['', Validators.pattern('^(https?\:\/\/)?(www\.youtube\.com|youtu\.?be)\/.+$')],
             tags: ['']
         });
+
+        // For keeping values for tutorial, when returning from add steps page
+        var tutorialSession = this.tutorialService.getSessionTutorial();
+        if (tutorialSession != undefined) {
+            this.addTutorialForm.controls.title.setValue(tutorialSession.title);
+            this.addTutorialForm.controls.description.setValue(tutorialSession.description);
+            this.addTutorialForm.controls.shortDescription.setValue(tutorialSession.shortDescription);
+            this.addTutorialForm.controls.videoURL.setValue(tutorialSession.video.replace('embed/','watch?v='));
+            this.addTutorialForm.controls.tags.setValue(tutorialSession.tags);
+        }
     }
 
     onSubmit() {
         this.submitted = true;
         this.success = false;
-        if (this.addTutorialForm.invalid) {
+        var sessionTutorial = this.tutorialService.getSessionTutorial();
+        if (this.addTutorialForm.invalid || sessionTutorial == undefined) {
             return;
         }
 
         this.success = true;
         this.submitted = false;
         console.log("here");
-        this.tutorialService.addTutorial(new Tutorial(
+        this.tutorialService.addTutorial(sessionTutorial);
+        this.tutorialService.clearSessionTutorial();
+        this.router.navigate(['tutorials']);
+    }
+
+    redirectToAddSteps() {
+        if (this.addTutorialForm.invalid) {
+            return;
+        }
+        this.tutorialService.setSessionTutorial(new Tutorial(
             this.addTutorialForm.controls.title.value,
             this.addTutorialForm.controls.description.value,
             0,
@@ -60,6 +80,6 @@ export class AddTutorialComponent implements OnInit {
             this.addTutorialForm.controls.videoURL.value.replace('watch?v=', 'embed/'),
             []
         ));
-        this.router.navigate(['tutorials']);
+        this.router.navigate(['addSteps']);
     }
 }

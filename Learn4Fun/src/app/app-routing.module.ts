@@ -13,6 +13,7 @@ import { AskComponent } from './qa/ask/ask.component';
 import { EditComponent } from './personal-profile/edit/edit.component';
 import { AddTutorialComponent } from './add-tutorial/add-tutorial.component';
 import { AddQuizComponent } from './add-quiz/add-quiz.component';
+import { AddStepsComponent } from './add-steps/add-steps.component';
 
 
 const routes: Routes = [
@@ -29,6 +30,7 @@ const routes: Routes = [
   {path: 'edit', component: EditComponent},
   {path: 'addTutorial', component: AddTutorialComponent},
   {path: 'addQuiz', component: AddQuizComponent},
+  {path: 'addSteps', component: AddStepsComponent}
 ];
 
 @NgModule({
