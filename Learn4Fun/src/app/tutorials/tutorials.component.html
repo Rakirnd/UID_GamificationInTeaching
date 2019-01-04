@@ -1,10 +1,10 @@
 <div class="button_add_div">
-  <button class="add_button">Add a new Tutorial!</button>
+  <button class="add_button" [routerLink]="['/addTutorial']">Add a new Tutorial!</button>
 </div>
 
 <div class="body">
 
-  <div class="list">
+  <div class="list" *ngFor="let tutorial of tutorials">
 
     <div class="list_presentation">
       <div class="list_image">
@@ -12,27 +12,26 @@
       </div>
 
       <div class="list_text">
-        <div class="list_title">{{javaTutorial.title}}</div>
-        <div class="list_description">{{javaTutorial.description}}</div>
+        <div class="list_title">{{tutorial.title}}</div>
+        <div class="list_description">{{tutorial.shortDescription}}</div>
       </div>
     </div>
 
     <div class="list_bottom">
-      <div class="tags">
-        <div class="tag">{{javaTutorial.tags[0]}}</div>
-        <div class="tag">{{javaTutorial.tags[1]}}</div>
+      <div class="tags" *ngFor="let tag of tutorial.tags">
+        <div class="tag">{{tag}}</div>
       </div>
 
       <div class="feedback">
         <div class="likes" [ngStyle]="{ 'background-image': likeImage, 'background-size': '85%'}">
-          <button class="feedbackButton" (click)="increaseLikes(javaTutorial)"></button>
+          <button class="feedbackButton" (click)="increaseLikes(tutorial)"></button>
         </div>
-        <div class="count">{{javaTutorial.likeCount}}</div>
+        <div class="count">{{tutorial.likeCount}}</div>
 
         <div class="likes" [ngStyle]="{ 'background-image': dislikeImage }">
-          <button class="feedbackButton" (click)="increaseDislikes(javaTutorial)"></button>
+          <button class="feedbackButton" (click)="increaseDislikes(tutorial)"></button>
         </div>
-        <div class="count">{{javaTutorial.dislikeCount}}</div>
+        <div class="count">{{tutorial.dislikeCount}}</div>
       </div>
     </div>
 
