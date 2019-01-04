@@ -1,4 +1,5 @@
 import {Component, OnInit} from '@angular/core';
+import { QuizzesService } from './quizzes.service';
 
 @Component({
   selector: 'app-quizzes',
@@ -7,15 +8,17 @@ import {Component, OnInit} from '@angular/core';
 })
 export class QuizzesComponent implements OnInit {
 
+  quizzes: Quiz[];
   // quizzes
-  javaMasterQuiz = new Quiz('Java Master', 'Prove you are a Java Master!', 100, 0, ['Java', 'OOP', 'Design Patterns']);
-  cSharpGuruQuiz = new Quiz('C# Guru', 'Show the world you have a sharp mind!', 100, 0, ['C#', 'Web', '.Net']);
+  // javaMasterQuiz = new Quiz('Java Master', 'Prove you are a Java Master!', 100, 0, ['Java', 'OOP', 'Design Patterns']);
+  // cSharpGuruQuiz = new Quiz('C# Guru', 'Show the world you have a sharp mind!', 100, 0, ['C#', 'Web', '.Net']);
 
   // images
   likeImage = 'url(../../assets/images/like02.png)';
   dislikeImage = 'url(../../assets/images/dislike.png)';
 
-  constructor() {
+  constructor(private quizzesService: QuizzesService) {
+    this.quizzes = quizzesService.getQuizzes();
   }
 
   ngOnInit() {
@@ -38,13 +41,15 @@ export class Quiz {
   likeCount: number;
   dislikeCount: number;
   tags: string[];
+  shortDescription: string;
 
-  constructor(title: string, description: string, likeCount: number, dislikeCount: number, tags: string[]) {
+  constructor(title: string, description: string, likeCount: number, dislikeCount: number, tags: string[], shortDescription: string) {
     this.title = title;
     this.description = description;
     this.likeCount = likeCount;
     this.dislikeCount = dislikeCount;
     this.tags = tags;
+    this.shortDescription = shortDescription;
   }
 
 }

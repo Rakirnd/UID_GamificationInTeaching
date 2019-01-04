@@ -21,6 +21,8 @@ import { GlobalRankingComponent } from './global-ranking/global-ranking.componen
 import { FunfactPostComponent } from './funfact/funfact-post/funfact-post.component';
 import { AskComponent } from './qa/ask/ask.component';
 import { EditComponent } from './personal-profile/edit/edit.component';
+import { AddTutorialComponent } from './add-tutorial/add-tutorial.component';
+import { AddQuizComponent } from './add-quiz/add-quiz.component';
 
 
 @NgModule({
@@ -38,7 +40,9 @@ import { EditComponent } from './personal-profile/edit/edit.component';
     GlobalRankingComponent,
     FunfactPostComponent,
     AskComponent,
-    EditComponent
+    EditComponent,
+    AddTutorialComponent,
+    AddQuizComponent
   ],
   imports: [
     BrowserModule,

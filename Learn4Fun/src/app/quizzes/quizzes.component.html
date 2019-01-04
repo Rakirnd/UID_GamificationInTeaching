@@ -1,10 +1,10 @@
 <div class="button_add_div">
-  <button class="add_button">Add a new Quiz!</button>
+  <button class="add_button"  routerLink="/addQuiz">Add a new Quiz!</button>
 </div>
 
 <div class="body">
 
-  <div class="list">
+  <div class="list" *ngFor="let quiz of quizzes">
 
     <div class="list_presentation">
       <div class="list_image">
@@ -12,67 +12,30 @@
       </div>
 
       <div class="list_text">
-        <div class="list_title">{{javaMasterQuiz.title}}</div>
-        <div class="list_description">{{javaMasterQuiz.description}}</div>
+        <div class="list_title">{{quiz.title}}</div>
+        <div class="list_description">{{quiz.description}}</div>
       </div>
     </div>
 
     <div class="list_bottom">
-      <div class="tags">
-        <div class="tag">{{javaMasterQuiz.tags[0]}}</div>
-        <div class="tag">{{javaMasterQuiz.tags[1]}}</div>
-        <div class="tag">{{javaMasterQuiz.tags[2]}}</div>
+      <div class="tags" *ngFor="let tag of quiz.tags">
+        <div class="tag">{{tag}}</div>
       </div>
 
       <div class="feedback">
         <div class="likes" [ngStyle]="{ 'background-image': likeImage, 'background-size': '85%'}">
-          <button class="feedbackButton" (click)="increaseLikes(javaMasterQuiz)"></button>
+          <button class="feedbackButton" (click)="increaseLikes(quiz)"></button>
         </div>
-        <div class="count">{{javaMasterQuiz.likeCount}}</div>
+        <div class="count">{{quiz.likeCount}}</div>
 
         <div class="likes" [ngStyle]="{ 'background-image': dislikeImage }">
-          <button class="feedbackButton" (click)="increaseDislikes(javaMasterQuiz)"></button>
+          <button class="feedbackButton" (click)="increaseDislikes(quiz)"></button>
         </div>
-        <div class="count">{{javaMasterQuiz.dislikeCount}}</div>
+        <div class="count">{{quiz.dislikeCount}}</div>
       </div>
     </div>
 
   </div>
 
-  <div class="list">
-
-    <div class="list_presentation">
-      <div class="list_image">
-        <img alt="" src="../../assets/images/quizzes.png"/>
-      </div>
-
-      <div class="list_text">
-        <div class="list_title">{{cSharpGuruQuiz.title}}</div>
-        <div class="list_description">{{cSharpGuruQuiz.description}}</div>
-      </div>
-    </div>
-
-    <div class="list_bottom">
-      <div class="tags">
-        <div class="tag">{{cSharpGuruQuiz.tags[0]}}</div>
-        <div class="tag">{{cSharpGuruQuiz.tags[1]}}</div>
-        <div class="tag">{{cSharpGuruQuiz.tags[2]}}</div>
-      </div>
-
-      <div class="feedback">
-        <div class="likes" [ngStyle]="{ 'background-image': likeImage, 'background-size': '85%'}">
-          <button class="feedbackButton" (click)="increaseLikes(cSharpGuruQuiz)"></button>
-        </div>
-        <div class="count">{{cSharpGuruQuiz.likeCount}}</div>
-
-        <div class="likes" [ngStyle]="{ 'background-image': dislikeImage }">
-          <button class="feedbackButton" (click)="increaseDislikes(cSharpGuruQuiz)"></button>
-        </div>
-        <div class="count">{{cSharpGuruQuiz.dislikeCount}}</div>
-
-      </div>
-
-    </div>
-
+  
   </div>
-</div>
