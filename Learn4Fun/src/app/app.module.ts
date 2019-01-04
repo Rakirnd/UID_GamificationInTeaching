@@ -24,6 +24,8 @@ import { EditComponent } from './personal-profile/edit/edit.component';
 import { AddTutorialComponent } from './add-tutorial/add-tutorial.component';
 import { AddQuizComponent } from './add-quiz/add-quiz.component';
 import { AddStepsComponent } from './add-steps/add-steps.component';
+import { ViewComponent } from './tutorials/view/view.component';
+import { AnswerComponent } from './qa/answer/answer.component';
 
 
 @NgModule({
@@ -44,7 +46,9 @@ import { AddStepsComponent } from './add-steps/add-steps.component';
     EditComponent,
     AddTutorialComponent,
     AddQuizComponent,
-    AddStepsComponent
+    AddStepsComponent,
+	ViewComponent,
+    AnswerComponent
   ],
   imports: [
     BrowserModule,

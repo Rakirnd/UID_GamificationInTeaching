@@ -14,6 +14,8 @@ import { EditComponent } from './personal-profile/edit/edit.component';
 import { AddTutorialComponent } from './add-tutorial/add-tutorial.component';
 import { AddQuizComponent } from './add-quiz/add-quiz.component';
 import { AddStepsComponent } from './add-steps/add-steps.component';
+import { ViewComponent } from './tutorials/view/view.component';
+import { AnswerComponent } from './qa/answer/answer.component';
 
 
 const routes: Routes = [
@@ -30,7 +32,9 @@ const routes: Routes = [
   {path: 'edit', component: EditComponent},
   {path: 'addTutorial', component: AddTutorialComponent},
   {path: 'addQuiz', component: AddQuizComponent},
-  {path: 'addSteps', component: AddStepsComponent}
+  {path: 'addSteps', component: AddStepsComponent},
+   {path: 'view-tutorial', component: ViewComponent},
+  {path: 'answer', component: AnswerComponent}
 ];
 
 @NgModule({
