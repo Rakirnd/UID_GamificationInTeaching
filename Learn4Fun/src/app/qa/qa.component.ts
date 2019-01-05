@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-qa',
@@ -13,7 +14,7 @@ export class QaComponent implements OnInit {
   likeImage = 'url(../../assets/images/like02.png)';
   dislikeImage = 'url(../../assets/images/dislike.png)';
 
-  constructor() {
+  constructor(private router: Router) {
   }
 
   ngOnInit() {
@@ -25,6 +26,10 @@ export class QaComponent implements OnInit {
 
   increaseDislikes(qa: QA) {
     qa.dislikeCount++;
+  }
+
+  redirectToAnswer() {
+    this.router.navigate(['answer']);
   }
 
 }

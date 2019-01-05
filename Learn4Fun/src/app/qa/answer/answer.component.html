@@ -1,62 +1,51 @@
 <div class="body">
-  <div class="question">
-    <div class="presentation">
-      <div class="q_title">
-        <h2>Java Array Index out of bounds</h2>
-      </div>
-      <div class="feedback">
-        <img alt="" src="../../../assets/images/like02.png"/>
-        <h3>80</h3>
-      </div>
-      <div class="feedback">
-          <img alt="" src="../../../assets/images/dislike.png"/>
-        <h3>8</h3>
-      </div>
-
-    </div>
-    <div class="q_body">
-      <h4>
-        Hello,
-        I am new to Java and tried printing...
-      </h4>
-    </div>
-  </div>
-  <div class="send_answer">
-      <input type="text" class="answer_input"  />
-      <button class="answer_btn">Answer</button>
-  </div>
-
-  <div class="answers_div">
-    <div class="answer">
-      <div class="answer_body">
-        <h4>The for should be...</h4>
-      </div>
-      <div class="feedback_row">
+    <div class="question">
+      <div class="presentation">
+        <div class="q_title">
+          <h2>Java Array Index out of bounds</h2>
+        </div>
         <div class="feedback">
           <img alt="" src="../../../assets/images/like02.png"/>
-          <h3>100</h3>
+          <h3>80</h3>
         </div>
         <div class="feedback">
-          <img alt="" src="../../../assets/images/dislike.png"/>
-          <h3>10</h3>
+            <img alt="" src="../../../assets/images/dislike.png"/>
+          <h3>8</h3>
         </div>
+      </div>
+      <div class="q_body">
+        <h4>
+          Hello,
+          I am new to Java and tried printing...
+        </h4>
       </div>
     </div>
-    <div class="answer">
-        <div class="answer_body">
-          <h4>Second comment...</h4>
-        </div>
+    <form class="" [formGroup]="addAnswerForm" (ngSubmit)="onSubmit()">  
+    <div class="send_answer">
+        <textarea formControlName="description" class="answer_input"></textarea>
+        <input type="submit" class="answer_btn" value="Answer" />
+    </div>
+    </form>
+
+    <div class="answers_div" *ngFor="let answer of answers">
+
+      <div class="answer">
+        <div class="answer_body">{{answer.description}} </div>
+
         <div class="feedback_row">
-          <div class="feedback">
-            <img alt="" src="../../../assets/images/like02.png"/>
-            <h3>100</h3>
-          </div>
-          <div class="feedback">
-            <img alt="" src="../../../assets/images/dislike.png"/>
-            <h3>10</h3>
-          </div>
+            <div class="likes" [ngStyle]="{ 'background-image': likeImage, 'background-size': '85%'}">
+                <button class="feedbackButton" (click)="increaseLikes(answer)"></button>
+            </div>
+            <div class="count">{{answer.likeCount}}</div>
+
+            <div class="likes" [ngStyle]="{ 'background-image': dislikeImage , 'background-size': '85%'}">
+                <button class="feedbackButton" (click)="increaseDislikes(answer)"></button>
+            </div>
+            <div class="count">{{answer.dislikeCount}}</div>
         </div>
+
       </div>
-  </div>
+    
+    </div>
 
 </div>

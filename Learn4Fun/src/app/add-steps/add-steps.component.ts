@@ -35,7 +35,6 @@ export class AddStepsComponent implements OnInit {
     }
 
     redirectToAddAnotherStep() {
-        console.log("aici");
         this.submitted = true;
         this.success = false;
 
