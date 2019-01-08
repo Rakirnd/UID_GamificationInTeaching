@@ -17,10 +17,9 @@ export class TutorialsService {
     
     constructor() {
        this.tutorials = JSON.parse(localStorage.getItem("tutorials"));
-        console.log("Constructor: ", this.tutorials);
+
         if(this.tutorials == undefined || this.tutorials == [] || this.tutorials.length == 0)
         {
-          console.log("empty");
           this.auxTutorials = [
             new Tutorial(
                 'Angular Tutorial',
@@ -41,7 +40,7 @@ export class TutorialsService {
     getTutorials()
     {
         this.tutorials = JSON.parse(localStorage.getItem("tutorials"));
-        console.log("Get tutorials: ", this.tutorials);
+
         return this.tutorials;
     }
 
@@ -49,12 +48,13 @@ export class TutorialsService {
     {
         this.tutorials = JSON.parse(localStorage.getItem("tutorials"));
         let tutorial = this.tutorials.filter(t => t.id == id);
-        console.log("Get tutorials: ", tutorial);
+    
         return tutorial[0];
     }
 
     getSessionTutorial() {
         this.sessionTutorial = JSON.parse(localStorage.getItem("sessionTutorial"));
+        
         return this.sessionTutorial;
     }
 
@@ -69,7 +69,6 @@ export class TutorialsService {
     }
 
     addTutorial(tutorial: Tutorial) {
-        console.log("here", tutorial);
         let uuid = UUID.UUID();
         tutorial.id=uuid;
         this.tutorials = JSON.parse(localStorage.getItem("tutorials"));

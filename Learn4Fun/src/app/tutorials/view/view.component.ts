@@ -17,12 +17,10 @@ export class ViewComponent implements OnInit {
   tutorial: Tutorial;
   constructor(public sanitizer: DomSanitizer, public route: ActivatedRoute, private tutorialService: TutorialsService) {
     this.id = this.route.snapshot.paramMap.get('id');
-    console.log(this.route.snapshot.paramMap.get('id'));
    }
 
   ngOnInit() {
     this.tutorial = this.tutorialService.getTutorialById(this.id);
-    console.log(this.tutorial);
   }
 
 }

@@ -51,19 +51,15 @@ export class AddTutorialComponent implements OnInit {
     }
 
     onSubmit() {
-        console.log("her");
         this.submitted = true;
         this.success = false;
         var sessionTutorial = this.tutorialService.getSessionTutorial();
-        console.log(this.addTutorialForm.invalid);
         if (this.addTutorialForm.invalid || sessionTutorial == undefined) {
-            console.log("ses");
             return;
         }
-        console.log("her");
         this.success = true;
         this.submitted = false;
-        console.log("here");
+
         this.tutorialService.addTutorial(sessionTutorial);
         this.tutorialService.clearSessionTutorial();
         this.router.navigate(['tutorials']);

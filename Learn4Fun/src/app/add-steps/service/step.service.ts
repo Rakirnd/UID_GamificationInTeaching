@@ -22,7 +22,6 @@ export class StepService {
 
     getSteps() {
         this.steps = JSON.parse(localStorage.getItem("steps"));
-        console.log("Get steps: ", this.steps);
         return this.steps;
     }
 

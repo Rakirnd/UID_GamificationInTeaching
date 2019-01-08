@@ -59,7 +59,6 @@ export class AddStepsComponent implements OnInit {
     onSubmit() {
         var tutorial = this.tutorialsService.getSessionTutorial();
         tutorial.steps = this.stepService.getSteps();
-        console.log("tutorial", tutorial);
         this.tutorialsService.setSessionTutorial(tutorial);
         this.stepService.resetSteps();
         this.router.navigate(['addTutorial']);

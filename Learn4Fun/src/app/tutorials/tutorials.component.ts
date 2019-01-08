@@ -31,7 +31,6 @@ export class TutorialsComponent implements OnInit {
   }
 
   viewTutorial(tutorial: Tutorial){
-    console.log(tutorial);
     this.router.navigate(['tutorial-view', {id: tutorial.id}]);
   }
 }
