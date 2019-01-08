@@ -2,29 +2,27 @@
   <div class="page_title">
     <p>Ask a question</p>
   </div>
+  <form class="" [formGroup]="addQuestionForm" (ngSubmit)="onSubmit()">
   <div class="title">
     <p>Title</p>
     <p>(All question must have one)</p>
-    <input class="title_input" type="text"/>
+    <input class="title_input" type="text" formControlName="title"/>
   </div>
   <div class="q_body">
       <p>Body of the question</p>
       <p>(Please explain the exact context and add a code snippet if possible)</p>
-      <input class="body_input" type="text"/>
+      <input class="body_input" type="text" formControlName="description"/>
   </div>
   <div class="tags">
     <div class="add_tag">
       <p>Add tag</p>
-      <input class="tag_input" type="text"/>
-      <button class="tag_btn">Add tag</button>
-    </div>
-    <div class="added_tags">
-      <p>Already added tags: </p>
+      <input class="tag_input" type="text" formControlName="tags"/>
     </div>
 
   </div>
   <div class="button_div">
-      <button class="add_q_btn">Ask question</button>
+      <input type="submit" class="add_q_btn" value="Ask Question" />
   </div>
+</form>
 
 </div>
