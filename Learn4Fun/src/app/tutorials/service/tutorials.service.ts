@@ -4,6 +4,7 @@ import { FormBuilder } from '@angular/forms';
 import { Validators } from '@angular/forms';
 import { FunFact } from '../../funfact/funfact.component';
 import { Tutorial } from '../../models/tutorial';
+import { UUID } from 'angular2-uuid';
 
 @Injectable({
   providedIn: 'root'
@@ -16,10 +17,9 @@ export class TutorialsService {
     
     constructor() {
        this.tutorials = JSON.parse(localStorage.getItem("tutorials"));
-        console.log("Constructor: ", this.tutorials);
+
         if(this.tutorials == undefined || this.tutorials == [] || this.tutorials.length == 0)
         {
-          console.log("empty");
           this.auxTutorials = [
             new Tutorial(
                 'Angular Tutorial',
@@ -29,7 +29,8 @@ export class TutorialsService {
                 ['Angular', 'JS', 'technology'],
                 'DEVELOP ACROSS ALL PLATFORMS',
                 "https://www.youtube.com/embed/d9SWNLZvA8g",
-                []                
+                [],
+                "1"              
             )
         ];
         localStorage.setItem("tutorials", JSON.stringify(this.auxTutorials));
@@ -39,12 +40,21 @@ export class TutorialsService {
     getTutorials()
     {
         this.tutorials = JSON.parse(localStorage.getItem("tutorials"));
-        console.log("Get tutorials: ", this.tutorials);
+
         return this.tutorials;
+    }
+
+    getTutorialById(id: string) : Tutorial
+    {
+        this.tutorials = JSON.parse(localStorage.getItem("tutorials"));
+        let tutorial = this.tutorials.filter(t => t.id == id);
+    
+        return tutorial[0];
     }
 
     getSessionTutorial() {
         this.sessionTutorial = JSON.parse(localStorage.getItem("sessionTutorial"));
+        
         return this.sessionTutorial;
     }
 
@@ -59,8 +69,10 @@ export class TutorialsService {
     }
 
     addTutorial(tutorial: Tutorial) {
-      this.tutorials = JSON.parse(localStorage.getItem("tutorials"));
-      this.tutorials.push(tutorial);
-      localStorage.setItem("tutorials", JSON.stringify(this.tutorials));
+        let uuid = UUID.UUID();
+        tutorial.id=uuid;
+        this.tutorials = JSON.parse(localStorage.getItem("tutorials"));
+        this.tutorials.push(tutorial);
+        localStorage.setItem("tutorials", JSON.stringify(this.tutorials));
     }
 }

@@ -27,9 +27,6 @@ export class AnswerComponent implements OnInit {
 
 
   onSubmit() {
-
-    console.log(this.addAnswerForm.controls.description.value);
-
     this.answers.push(new Answer(this.addAnswerForm.controls.description.value, 0, 0))
     this.addAnswerForm.controls.description.setValue("");
   }
@@ -41,7 +38,6 @@ export class AnswerComponent implements OnInit {
   increaseDislikes(answer: Answer) {
     answer.dislikeCount++;
   }
-
 }
 
 export class Answer {
@@ -50,11 +46,9 @@ export class Answer {
   likeCount: number;
   dislikeCount: number;
 
-
   constructor(description: string, likeCount: number, dislikeCount: number) {
     this.description = description;
     this.likeCount = likeCount;
     this.dislikeCount = dislikeCount;
   }
-
 }

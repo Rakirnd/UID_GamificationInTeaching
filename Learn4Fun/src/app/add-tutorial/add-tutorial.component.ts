@@ -57,10 +57,9 @@ export class AddTutorialComponent implements OnInit {
         if (this.addTutorialForm.invalid || sessionTutorial == undefined) {
             return;
         }
-
         this.success = true;
         this.submitted = false;
-        console.log("here");
+
         this.tutorialService.addTutorial(sessionTutorial);
         this.tutorialService.clearSessionTutorial();
         this.router.navigate(['tutorials']);

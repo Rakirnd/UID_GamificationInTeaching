@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Tutorial } from '../models/tutorial';
 import { TutorialsService } from './service/tutorials.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-tutorials',
@@ -10,12 +11,11 @@ import { TutorialsService } from './service/tutorials.service';
 })
 export class TutorialsComponent implements OnInit {
   tutorials : Tutorial[];
-  //javaTutorial = new Tutorial('Java Beginner', 'Learn Java from scratch!', 15, 2, ['Java', 'OOP']);
-
+  
   likeImage = 'url(../../assets/images/like02.png)';
   dislikeImage = 'url(../../assets/images/dislike.png)';
 
-  constructor(private tutorialService: TutorialsService) {    
+  constructor(private tutorialService: TutorialsService, private router: Router) {    
   }
 
   ngOnInit() {
@@ -28,5 +28,9 @@ export class TutorialsComponent implements OnInit {
 
   increaseDislikes(tutorial: Tutorial) {
     tutorial.dislikeCount++;
+  }
+
+  viewTutorial(tutorial: Tutorial){
+    this.router.navigate(['tutorial-view', {id: tutorial.id}]);
   }
 }

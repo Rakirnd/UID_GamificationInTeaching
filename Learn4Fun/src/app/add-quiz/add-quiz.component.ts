@@ -47,7 +47,6 @@ export class AddQuizComponent implements OnInit {
 
         this.success = true;
         this.submitted = false;
-        console.log("here");
         this.quizService.addQuiz(new Quiz(
             this.addQuizForm.controls.title.value,
             this.addQuizForm.controls.description.value,
