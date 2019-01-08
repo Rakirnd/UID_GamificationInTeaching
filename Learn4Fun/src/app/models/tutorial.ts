@@ -14,7 +14,7 @@ export class Tutorial {
 
 
   constructor(title: string, description: string, likeCount: number, dislikeCount: number, tags: string[],
-              shortDescription: string, video: string, steps: Step[], id: string) {
+              shortDescription: string, video: string, steps: Step[], id?: string) {
     this.title = title;
     this.description = description;
     this.likeCount = likeCount;
