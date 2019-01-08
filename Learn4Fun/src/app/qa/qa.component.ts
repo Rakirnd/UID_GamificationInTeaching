@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import {Component, OnInit} from '@angular/core';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-qa',
@@ -8,7 +8,7 @@ import { Router } from '@angular/router';
 })
 export class QaComponent implements OnInit {
 
-  javaArrays = new QA('Java:Array Index out of bound', 'Put link to Answer here', 20 , 3, ['Java', 'Arrays']);
+  javaArrays = new QA('Java:Array Index out of bound', 'Put link to Answer here', 20, 3, ['Java', 'Arrays']);
   javaScriptBtn = new QA('JS:Button does not trigger action', 'Put link to Answer here', 15, 4, ['JavaScript', 'HTML']);
 
   likeImage = 'url(../../assets/images/like02.png)';

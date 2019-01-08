@@ -57,7 +57,7 @@ export class HomeComponent implements OnInit {
     [0, 0, 0, 0],
     [],
     [38, 80, 62, 20],
-    '/');
+    '/register');
   funFactSlide = new HomePageSlideShowComponent(
     '../../assets/images/FirefoxFunFact02.JPG',
     this.funFactMessage1,

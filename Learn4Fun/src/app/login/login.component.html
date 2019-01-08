@@ -1,0 +1,23 @@
+<h1>Login</h1>
+
+<form [formGroup]="loginForm">
+
+  <p *ngIf="submitted" [ngClass]="{
+  'green':success,
+  'red':!success
+}">{{errMessage}}</p>
+
+  <label>
+    Username:&nbsp;
+    <input type="text" formControlName="username"/>
+  </label>
+
+  <label>
+    Password:&nbsp;
+    <input type="password" formControlName="password"/>
+  </label>
+
+  <button  class="submit_button" (click)=login()>Login</button>
+  <button  class="submit_button" routerLink="/register">Register</button>
+
+</form>

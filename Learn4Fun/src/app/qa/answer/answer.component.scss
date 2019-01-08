@@ -1,158 +1,158 @@
-.body{
-    height: 100%;
-    width: 80%;
-    display: flex;
-    flex-direction: column;
+.body {
+  height: 100%;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
 }
 
-.question{
-    padding: 0.5cm;
-    height: 100%;
-    width: 100%;
-    background-color: gray;
-    margin: 0;
-    margin-top: 1cm;
-    margin-bottom: 1cm;
-    display: flex;
-    flex-direction: column;
+.question {
+  padding: 0.5cm;
+  height: 100%;
+  width: 100%;
+  background-color: gray;
+  margin: 0;
+  margin-top: 1cm;
+  margin-bottom: 1cm;
+  display: flex;
+  flex-direction: column;
 }
 
-.presentation{
-    height: 100%;
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    padding-left: 0.5cm;
+.presentation {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  padding-left: 0.5cm;
 }
 
-.q_title{
-    height: 100%;
-    width: 60%;
+.q_title {
+  height: 100%;
+  width: 60%;
 }
 
-.feedback{
-    max-height: 1cm;
-    max-width: 10%;
-    margin-top: 0.5cm;
-    margin-right: 0.5cm;
-    justify-content: flex-end;
+.feedback {
+  max-height: 1cm;
+  max-width: 10%;
+  margin-top: 0.5cm;
+  margin-right: 0.5cm;
+  justify-content: flex-end;
 }
 
 .feedback > img {
-    max-height: 1cm;
-    max-width: 70%;
+  max-height: 1cm;
+  max-width: 70%;
 }
 
-.feedback > h3{
-    max-height: 1cm;
-    max-width: 2cm;
-    margin-left: 0.2cm;
-    margin-top: 0;
+.feedback > h3 {
+  max-height: 1cm;
+  max-width: 2cm;
+  margin-left: 0.2cm;
+  margin-top: 0;
 }
 
-.q_body{
-    margin-top: 0.5cm;
-    margin-bottom: 0.5 cm;
-    max-width: 100%;
-    max-height: 100%;
-    display: flex;
-    flex-direction: column;
-    padding-left: 0.5cm;
+.q_body {
+  margin-top: 0.5cm;
+  margin-bottom: 0.5cm;
+  max-width: 100%;
+  max-height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding-left: 0.5cm;
 }
 
-.send_answer{
-    padding: 0.5cm;
-    margin-top: 0.5cm;
-    margin-bottom: 1cm;
-    display: flex;
-    flex-direction: column;
-    background-color: gray;
-    height: 100%;
-    width: 100%;
+.send_answer {
+  padding: 0.5cm;
+  margin-top: 0.5cm;
+  margin-bottom: 1cm;
+  display: flex;
+  flex-direction: column;
+  background-color: gray;
+  height: 100%;
+  width: 100%;
 }
 
-.answer_input{
-    max-width: 100%;
-    height: 4cm;
-    display: flex;
-    flex-direction: column;
+.answer_input {
+  max-width: 100%;
+  height: 4cm;
+  display: flex;
+  flex-direction: column;
 }
 
-.answer_btn{
-    background-color: green;
-    border: 2px solid green;
-    border-radius: 25px;
-    overflow: hidden;
-    
-    height: 100%;
-    width: 10%;
-    justify-self: right;
-    margin-left: auto;
-    margin-top: 0.5cm;
+.answer_btn {
+  background-color: green;
+  border: 2px solid green;
+  border-radius: 25px;
+  overflow: hidden;
+
+  height: 100%;
+  width: 10%;
+  justify-self: right;
+  margin-left: auto;
+  margin-top: 0.5cm;
 }
 
-.answers_div{
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    margin: auto;
-    height: 100%;
-    width: 100%;
+.answers_div {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  margin: auto;
+  height: 100%;
+  width: 100%;
 }
 
-.answer{
-    display: flex;
-    flex-direction: column;
-    padding-left: 0.5cm;
-    margin: auto;
-    margin-bottom: 0.5cm;
-    justify-self: flex-end;
-    background-color: gray;
-    width: 70%;
-    height: 100%;
+.answer {
+  display: flex;
+  flex-direction: column;
+  padding-left: 0.5cm;
+  margin: auto;
+  margin-bottom: 0.5cm;
+  justify-self: flex-end;
+  background-color: gray;
+  width: 70%;
+  height: 100%;
 }
 
-.answer_body{
-    height: 3cm;
-    width: 100%;
-    display: flex;
-    flex-direction: row;
+.answer_body {
+  height: 3cm;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
 }
 
-.feedback_row{
-    display: flex;
-    flex-direction: row;
-    height: 1.5cm;
-    width: 100%;
-    justify-content: flex-end;
-    justify-self: flex-end;
-    margin: auto;
-    margin-top: 0;
-    margin-bottom: 0.2cm;
+.feedback_row {
+  display: flex;
+  flex-direction: row;
+  height: 1.5cm;
+  width: 100%;
+  justify-content: flex-end;
+  justify-self: flex-end;
+  margin: auto;
+  margin-top: 0;
+  margin-bottom: 0.2cm;
 }
 
 .likes {
-  
-    display: flex;
-    width: 50px;
-    height: 45px;
-    border: 0;
-    background-size: 95%;
-    background-repeat: no-repeat;
-  
-  }
+
+  display: flex;
+  width: 50px;
+  height: 45px;
+  border: 0;
+  background-size: 95%;
+  background-repeat: no-repeat;
+
+}
 
 .feedbackButton {
-  
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0);
-    border: 0;
-  
-  }
 
-.count{
-    margin: 0 30px 0 10px;
-    display: flex;
-  }
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0);
+  border: 0;
+
+}
+
+.count {
+  margin: 0 30px 0 10px;
+  display: flex;
+}
 

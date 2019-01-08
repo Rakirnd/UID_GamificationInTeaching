@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
-import { QuizzesService } from './quizzes.service';
+import {QuizzesService} from './service/quizzes.service';
+import {Quiz} from '../models/Quiz';
 
 @Component({
   selector: 'app-quizzes',
@@ -30,26 +31,6 @@ export class QuizzesComponent implements OnInit {
 
   increaseDislikes(quiz: Quiz) {
     quiz.dislikeCount++;
-  }
-
-}
-
-export class Quiz {
-
-  title: string;
-  description: string;
-  likeCount: number;
-  dislikeCount: number;
-  tags: string[];
-  shortDescription: string;
-
-  constructor(title: string, description: string, likeCount: number, dislikeCount: number, tags: string[], shortDescription: string) {
-    this.title = title;
-    this.description = description;
-    this.likeCount = likeCount;
-    this.dislikeCount = dislikeCount;
-    this.tags = tags;
-    this.shortDescription = shortDescription;
   }
 
 }

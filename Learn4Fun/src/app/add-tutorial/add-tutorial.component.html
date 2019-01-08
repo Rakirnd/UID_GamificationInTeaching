@@ -1,62 +1,68 @@
 <div class="body">
 
   <form class="" [formGroup]="addTutorialForm" (ngSubmit)="onSubmit()">
-      <div class="funfact_header">
-          <h3 class="funfact_logo">Tutorial</h3>
-          <div class="funfact_header_info">
-              <label>
-                  Title:
-                  <div *ngIf="submitted && addTutorialForm.controls.title.errors" class="funfact_posting_error">
-                      <div *ngIf="addTutorialForm.controls.title.errors.required">Title of the fun fact is missing!</div>
-                      <div *ngIf="addTutorialForm.controls.title.errors.minlength">Title too short!</div>
-                      <div *ngIf="addTutorialForm.controls.title.errors.pattern">Only alphanumerical characters are allowed!</div>
-                  </div>                  
-              </label>
-              <input type="text" class="funfact_title inputField" formControlName="title" />
-          </div>
-      </div>
-      <div class="contentSection">
+    <div class="funfact_header">
+      <h3 class="funfact_logo">Tutorial</h3>
+      <div class="funfact_header_info">
         <label>
-            Short description:
-            <div *ngIf="submitted && addTutorialForm.controls.shortDescription.errors" class="funfact_posting_error">
-                <div *ngIf="addTutorialForm.controls.shortDescription.errors.required">Short description of the tutorial is missing!</div>
-                <div *ngIf="addTutorialForm.controls.shortDescription.errors.maxlength">Short description can have max 800 characters!</div>
-            </div>
-            <textarea formControlName="shortDescription" class="textField inputField"></textarea>
+          Title:
+          <div *ngIf="submitted && addTutorialForm.controls.title.errors" class="funfact_posting_error">
+            <div *ngIf="addTutorialForm.controls.title.errors.required">Title of the fun fact is missing!</div>
+            <div *ngIf="addTutorialForm.controls.title.errors.minlength">Title too short!</div>
+            <div *ngIf="addTutorialForm.controls.title.errors.pattern">Only alphanumerical characters are allowed!</div>
+          </div>
         </label>
+        <input type="text" class="funfact_title inputField" formControlName="title"/>
+      </div>
     </div>
-      <div class="contentSection">
-          <label>
-              Description:
-              <div *ngIf="submitted && addTutorialForm.controls.description.errors" class="funfact_posting_error">
-                  <div *ngIf="addTutorialForm.controls.description.errors.required">Description of the fun fact is missing!</div>
-                  <div *ngIf="addTutorialForm.controls.description.errors.maxlength">Description can have max 800 characters!</div>
-              </div>
-              <textarea formControlName="description" class="contentTextArea inputField"></textarea>
-          </label>
-      </div>
+    <div class="contentSection">
+      <label>
+        Short description:
+        <div *ngIf="submitted && addTutorialForm.controls.shortDescription.errors" class="funfact_posting_error">
+          <div *ngIf="addTutorialForm.controls.shortDescription.errors.required">Short description of the tutorial is
+            missing!
+          </div>
+          <div *ngIf="addTutorialForm.controls.shortDescription.errors.maxlength">Short description can have max 800
+            characters!
+          </div>
+        </div>
+        <textarea formControlName="shortDescription" class="textField inputField"></textarea>
+      </label>
+    </div>
+    <div class="contentSection">
+      <label>
+        Description:
+        <div *ngIf="submitted && addTutorialForm.controls.description.errors" class="funfact_posting_error">
+          <div *ngIf="addTutorialForm.controls.description.errors.required">Description of the fun fact is missing!
+          </div>
+          <div *ngIf="addTutorialForm.controls.description.errors.maxlength">Description can have max 800 characters!
+          </div>
+        </div>
+        <textarea formControlName="description" class="contentTextArea inputField"></textarea>
+      </label>
+    </div>
 
-      <div class="postingArea">
-          <label>
-              Video:
-              <div *ngIf="submitted && addTutorialForm.controls.videoURL.errors" class="funfact_posting_error">
-                  <div *ngIf="addTutorialForm.controls.videoURL.errors.pattern">Invalid URL!</div>
-              </div>
-          </label>
-          <input type="text" formControlName="videoURL" class="inputField textField" />
-      </div>
+    <div class="postingArea">
+      <label>
+        Video:
+        <div *ngIf="submitted && addTutorialForm.controls.videoURL.errors" class="funfact_posting_error">
+          <div *ngIf="addTutorialForm.controls.videoURL.errors.pattern">Invalid URL!</div>
+        </div>
+      </label>
+      <input type="text" formControlName="videoURL" class="inputField textField"/>
+    </div>
 
-      <div class="postingArea">
-          <label>
-              Tags :
-              <input type="text" formControlName="tags" class="inputField textField" />
-          </label>
-      </div>
+    <div class="postingArea">
+      <label>
+        Tags :
+        <input type="text" formControlName="tags" class="inputField textField"/>
+      </label>
+    </div>
 
-      <div class="funfact-post-btns">
-          <input type="button" value="ADD STEPS" (click)="redirectToAddSteps()" class="post_funfact_btn" />          
-          <input type="submit" value="DONE" class="post_funfact_btn" />
-          <input type="button" routerLink="/tutorials" value="CANCEL" class="post_funfact_btn" />
-      </div>
+    <div class="funfact-post-btns">
+      <input type="button" value="ADD STEPS" (click)="redirectToAddSteps()" class="post_funfact_btn"/>
+      <input type="submit" value="DONE" class="post_funfact_btn"/>
+      <input type="button" routerLink="/tutorials" value="CANCEL" class="post_funfact_btn"/>
+    </div>
   </form>
 </div>

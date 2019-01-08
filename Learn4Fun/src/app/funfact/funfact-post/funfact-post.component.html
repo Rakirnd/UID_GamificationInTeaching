@@ -1,70 +1,70 @@
 <div class="body">
 
-    <form class="funfact_form" [formGroup]="funfactForm" (ngSubmit)="onSubmit()">
-        <div class="funfact_header">
-            <div class="funfact_logo">Fun Fact</div>
-            <div class="funfact_header_info">
-                <label>
-                    Title:
-                    <div *ngIf="submitted && funfactForm.controls.title.errors" class="funfact_posting_error">
-                        <div *ngIf="funfactForm.controls.title.errors.required">Title of the fun fact is missing!</div>
-                        <div *ngIf="funfactForm.controls.title.errors.minlength">Title too short!</div>
-                        <div *ngIf="funfactForm.controls.title.errors.pattern">Only alphanumerical characters are allowed!</div>
-                    </div>
-                    <input type="text" class="funfact_title inputField" formControlName="title" />
-                </label>
+  <form class="funfact_form" [formGroup]="funfactForm" (ngSubmit)="onSubmit()">
+    <div class="funfact_header">
+      <div class="funfact_logo">Fun Fact</div>
+      <div class="funfact_header_info">
+        <label>
+          Title:
+          <div *ngIf="submitted && funfactForm.controls.title.errors" class="funfact_posting_error">
+            <div *ngIf="funfactForm.controls.title.errors.required">Title of the fun fact is missing!</div>
+            <div *ngIf="funfactForm.controls.title.errors.minlength">Title too short!</div>
+            <div *ngIf="funfactForm.controls.title.errors.pattern">Only alphanumerical characters are allowed!</div>
+          </div>
+          <input type="text" class="funfact_title inputField" formControlName="title"/>
+        </label>
 
-                <label>
-                    Description:
-                    <div *ngIf="submitted && funfactForm.controls.description.errors" class="funfact_posting_error">
-                        <div *ngIf="funfactForm.controls.description.errors.required">Description of the fun fact is missing!</div>
-                    </div>
-                    <textarea formControlName="description" class="funfact_description inputField"></textarea>
-                </label>
-            </div>
-        </div>
+        <label>
+          Description:
+          <div *ngIf="submitted && funfactForm.controls.description.errors" class="funfact_posting_error">
+            <div *ngIf="funfactForm.controls.description.errors.required">Description of the fun fact is missing!</div>
+          </div>
+          <textarea formControlName="description" class="funfact_description inputField"></textarea>
+        </label>
+      </div>
+    </div>
 
-        <div class="contentSection">
-            <label>
-                Content:
-                <div *ngIf="submitted && funfactForm.controls.content.errors" class="funfact_posting_error">
-                    <div *ngIf="funfactForm.controls.content.errors.required">Content of the fun fact is missing!</div>
-                    <div *ngIf="funfactForm.controls.content.errors.maxlength">Content can have max 800 characters!</div>
-                </div>
-                <textarea formControlName="content" class="contentTextArea inputField"></textarea>
-            </label>
+    <div class="contentSection">
+      <label>
+        Content:
+        <div *ngIf="submitted && funfactForm.controls.content.errors" class="funfact_posting_error">
+          <div *ngIf="funfactForm.controls.content.errors.required">Content of the fun fact is missing!</div>
+          <div *ngIf="funfactForm.controls.content.errors.maxlength">Content can have max 800 characters!</div>
         </div>
+        <textarea formControlName="content" class="contentTextArea inputField"></textarea>
+      </label>
+    </div>
 
-        <div class="postingArea">
-            <label>
-                Images:
-                <input type="file" formControlName="image1" />
-                <input type="file" formControlName="image2" />
-            </label>
-        </div>
+    <div class="postingArea">
+      <label>
+        Images:
+        <input type="file" formControlName="image1"/>
+        <input type="file" formControlName="image2"/>
+      </label>
+    </div>
 
-        <div class="postingArea">
-            <label>
-                Video:
-                <div *ngIf="submitted && funfactForm.controls.videoURL.errors" class="funfact_posting_error">
-                    <div *ngIf="funfactForm.controls.videoURL.errors.pattern">Invalid URL!</div>
-                </div>
-            </label>
-            <input type="text" formControlName="videoURL" class="inputField textField" />
+    <div class="postingArea">
+      <label>
+        Video:
+        <div *ngIf="submitted && funfactForm.controls.videoURL.errors" class="funfact_posting_error">
+          <div *ngIf="funfactForm.controls.videoURL.errors.pattern">Invalid URL!</div>
         </div>
+      </label>
+      <input type="text" formControlName="videoURL" class="inputField textField"/>
+    </div>
 
-        <div class="postingArea">
-            <label>
-                Tags :
-                <input type="text" formControlName="tags" class="inputField textField" />
-            </label>
-        </div>
+    <div class="postingArea">
+      <label>
+        Tags :
+        <input type="text" formControlName="tags" class="inputField textField"/>
+      </label>
+    </div>
 
-        <div class="funfact-post-btns">
-            <input type="button" routerLink="/funfact" value="Back" class="post_funfact_btn" />
-            <input type="button" (click)="resetFields()" value="Reset" class="post_funfact_btn" />
-            <input type="submit" value="Post FunFact" class="post_funfact_btn" />
-        </div>
-    </form>
+    <div class="funfact-post-btns">
+      <input type="button" routerLink="/funfact" value="Back" class="post_funfact_btn"/>
+      <input type="button" (click)="resetFields()" value="Reset" class="post_funfact_btn"/>
+      <input type="submit" value="Post FunFact" class="post_funfact_btn"/>
+    </div>
+  </form>
 
 </div>

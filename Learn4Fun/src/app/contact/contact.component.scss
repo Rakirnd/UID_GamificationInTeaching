@@ -1,11 +1,11 @@
-h1{
+h1 {
 
   text-align: center;
   font-size: 3em;
 
 }
 
-.contact_text{
+.contact_text {
 
   text-align: center;
   width: 60%;
@@ -13,7 +13,7 @@ h1{
 
 }
 
-label, textarea{
+label, textarea {
 
   display: flex;
   justify-content: center;
@@ -24,21 +24,21 @@ label, textarea{
 
 }
 
-.green{
+.green {
   text-align: center;
   width: 60%;
   margin: 0 auto;
-  color:green;
+  color: green;
 }
 
-.red{
+.red {
   text-align: center;
   width: 60%;
   margin: 0 auto;
-  color:red;
+  color: red;
 }
 
-.submit_button_div{
+.submit_button_div {
 
   display: flex;
   justify-content: flex-end;
@@ -46,12 +46,12 @@ label, textarea{
 
 }
 
-.submit_button{
+.submit_button {
   background-color: grey;
   border: 2px grey;
   border-radius: 5px 5px 5px 5px;
   color: white;
-  padding: 15px 32px ;
+  padding: 15px 32px;
   text-align: center;
   text-decoration: none;
   display: inline-block;

@@ -63,7 +63,7 @@
 
 .Panel-area {
 
-  position:relative;
+  position: relative;
   max-width: 1600px;
   margin: 0 auto;
   height: 450px;
@@ -88,11 +88,11 @@
   font-size: 3em;
   line-height: 1.5em;
   color: #ffffff;
-  text-shadow: 0 0 1px transparent,0 0 5px rgba(0,0,0,.8);
+  text-shadow: 0 0 1px transparent, 0 0 5px rgba(0, 0, 0, .8);
 
 }
 
-.Panel-buttons{
+.Panel-buttons {
 
   position: absolute;
   bottom: 10%;
@@ -101,15 +101,15 @@
 
 .Button-outer {
 
-  background: rgba(83,102,144,.6);
-  border: 1px solid rgba(214,199,196,1);
+  background: rgba(83, 102, 144, .6);
+  border: 1px solid rgba(214, 199, 196, 1);
   border-radius: 5px 5px 5px 5px;
   padding: 12px 30px;
   text-align: center;
   width: 220px;
   line-height: 1.5em;
   font-weight: 400;
-  color: rgba(214,199,196,1);
+  color: rgba(214, 199, 196, 1);
   text-transform: uppercase;
   margin: 0 0 20px 0;
 

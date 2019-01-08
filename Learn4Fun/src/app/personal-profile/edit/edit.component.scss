@@ -1,126 +1,126 @@
-.body{
-    height: 100%;
-    width: 80%;
-    display: flex;
-    flex-direction: column;
+.body {
+  height: 100%;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
 }
 
-.top_div{
-    height: 6cm;
-    width: 100%;
-    display: flex;
-    flex-direction: row;
+.top_div {
+  height: 6cm;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
 }
 
-.left_div{
-    width: 30%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
+.left_div {
+  width: 30%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
-.img_div{
-    height: 80%;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
+.img_div {
+  height: 80%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
-.img_btn{
-    height: 20%;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
+.img_btn {
+  height: 20%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
-.change_btn{
-    background-color: green;
-    border: 2px solid green;
-    border-radius: 25px;
-    overflow: hidden;
-    margin: 0;
-    margin-top: 10pt;
+.change_btn {
+  background-color: green;
+  border: 2px solid green;
+  border-radius: 25px;
+  overflow: hidden;
+  margin: 0;
+  margin-top: 10pt;
 }
 
-.right_div{
-    height: 100%;
-    width: 70%;
-    display: flex;
-    flex-direction: column;
+.right_div {
+  height: 100%;
+  width: 70%;
+  display: flex;
+  flex-direction: column;
 }
 
-.bottom_div{
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column
+.bottom_div {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column
 }
 
-.edit_field{
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    height: 1.5cm;
-    margin: 0;
-    padding: 0;
+.edit_field {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 1.5cm;
+  margin: 0;
+  padding: 0;
 }
 
-.edit_input{
-    width: 30%;
-    height: 80%;
-    display: flex;
-    flex-direction: row;
-    font-size: 18pt;
-    margin-top: 5pt;
-    margin-bottom: 5pt;
-    overflow: hidden;
+.edit_input {
+  width: 30%;
+  height: 80%;
+  display: flex;
+  flex-direction: row;
+  font-size: 18pt;
+  margin-top: 5pt;
+  margin-bottom: 5pt;
+  overflow: hidden;
 }
 
-.buttons_div{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    height: 1.5cm;
-    width: 100%;
-    margin: auto;
-    margin-top: 0.5cm;
-    margin-bottom: 0.5cm;
+.buttons_div {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  height: 1.5cm;
+  width: 100%;
+  margin: auto;
+  margin-top: 0.5cm;
+  margin-bottom: 0.5cm;
 }
 
-.back_btn{
-    background-color: green;
-    border: 2px solid green;
-    border-radius: 25px;
-    overflow: hidden;
-    margin: 0;
-    height: 100%;
-    width: 20%;
+.back_btn {
+  background-color: green;
+  border: 2px solid green;
+  border-radius: 25px;
+  overflow: hidden;
+  margin: 0;
+  height: 100%;
+  width: 20%;
 }
 
-.save_btn{
-    background-color: green;
-    border: 2px solid green;
-    border-radius: 25px;
-    overflow: hidden;
-    margin: 0;
-    margin-left: 25pt;
-    height: 100%;
-    width: 20%;
+.save_btn {
+  background-color: green;
+  border: 2px solid green;
+  border-radius: 25px;
+  overflow: hidden;
+  margin: 0;
+  margin-left: 25pt;
+  height: 100%;
+  width: 20%;
 }
 
-.edit_field > h3{
-    width: 30%;
-    height: 100%;
-    margin:0;
-    margin-top: 20pt;
-    font-size:20pt;
-    font-weight: strong;
+.edit_field > h3 {
+  width: 30%;
+  height: 100%;
+  margin: 0;
+  margin-top: 20pt;
+  font-size: 20pt;
+  font-weight: strong;
 }
 
-.img_div > img{
-    display: flex;
-    flex-direction: column;
-    max-height: 100%;
-    max-width: 60%;
-    margin: auto;
+.img_div > img {
+  display: flex;
+  flex-direction: column;
+  max-height: 100%;
+  max-width: 60%;
+  margin: auto;
 }

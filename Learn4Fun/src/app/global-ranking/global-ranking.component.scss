@@ -1,136 +1,139 @@
-.leaderboard{
-    display: flex;
-    flex-direction: column;
-    margin: auto;
-    width: 80%;
-    height: 100%;
+.leaderboard {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  width: 80%;
+  height: 100%;
 }
 
-.user_details{
-    display: flex;
-    flex-direction: row;
-    height: 7cm;
-    width: 100%;
+.user_details {
+  display: flex;
+  flex-direction: row;
+  height: 7cm;
+  width: 100%;
 }
 
-.user_position{
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    width: 20%;
+.user_position {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 20%;
 }
 
-.user_description{
-    display: flex;
-    flex-direction: row;
-    height: 100%;
-    width: 80%;
+.user_description {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  width: 80%;
 }
 
-.user_pic{
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    width: 30%;
+.user_pic {
+  display: flex;
+  flex-direction: column;
+  background: url("../../assets/images/profile_pic.jpg");
+  background-size: cover;
+  width: 30%;
+  height: 100%;
+}
+
+.user_info {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 70%;
+}
+
+.bar {
+  display: flex;
+  height: 1cm;
+  width: 100%;
+  background-color: black;
+}
+
+.rankings {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+}
+
+.ranking {
+  display: flex;
+  flex-direction: row;
+  height: 5cm;
+  width: 100%;
+  margin: 0;
+  margin-top: 1cm;
 
 }
 
-.user_info{
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    width: 70%;
+.position {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  width: 10%;
 }
 
-.bar{
-    display: flex;
-    height: 1cm;
-    width: 100%;
-    background-color: black;
-}
-.rankings{
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    width: 100%;
+.specific_user {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  width: 90%;
 }
 
-.ranking{
-    display: flex;
-    flex-direction: row;
-    height: 5cm;
-    width: 100%;
-    margin: 0;
-    margin-top: 1cm;
-    
+.profile_pic {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 20%;
 }
 
-.position{
-    display: flex;
-    flex-direction: row;
-    height: 100%;
-    width: 10%;
-}
-
-.specific_user{
-    display: flex;
-    flex-direction: row;
-    height: 100%;
-    width: 90%;
-}
-
-.profile_pic{
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    width: 20%;
-}
-
-.profile_pic > img{
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    width: 100%;
+.profile_pic > img {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
 }
 
 
-.details{
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    width: 70%;
-    background-color: lightgrey;
-}
-.position > h1{
-    margin: auto;
-    margin-top: 0;
-    padding: 0;
-    font-size: 9em;
+.details {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 70%;
+  background-color: lightgrey;
 }
 
-.user_position > h1{
-    margin: auto;
-    margin-top: 0;
-    padding: 0;
-    font-size: 7em;
+.position > h1 {
+  margin: auto;
+  margin-top: 0;
+  padding: 0;
+  font-size: 9em;
 }
 
-.user_info > h3{
-    font-size: 1.25em;
-    margin: 0;
-    padding: 0;
+.user_position > h1 {
+  margin: auto;
+  margin-top: 0;
+  padding: 0;
+  font-size: 7em;
 }
 
-.details > h3{
-    font-size: 1.25em;
-    margin: 0;
-    padding: 0;
+.user_info > h3 {
+  font-size: 1.25em;
+  margin: 0;
+  padding: 0;
 }
 
-.user_position > h3{
-    font-size: 1.25em;
-    margin: auto;
-    margin-top: 0;
-    margin-bottom: 0;
-    padding: 0;
+.details > h3 {
+  font-size: 1.25em;
+  margin: 0;
+  padding: 0;
+}
+
+.user_position > h3 {
+  font-size: 1.25em;
+  margin: auto;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: 0;
 }

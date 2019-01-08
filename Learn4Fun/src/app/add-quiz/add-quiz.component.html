@@ -1,51 +1,54 @@
 <div class="body">
 
   <form class="" [formGroup]="addQuizForm" (ngSubmit)="onSubmit()">
-      <div class="funfact_header">
-          <h3 class="funfact_logo">Quiz</h3>
-          <div class="funfact_header_info">
-              <label>
-                  Title:
-                  <div *ngIf="submitted && addQuizForm.controls.title.errors" class="funfact_posting_error">
-                      <div *ngIf="addQuizForm.controls.title.errors.required">Title of the quiz is missing!</div>
-                      <div *ngIf="addQuizForm.controls.title.errors.minlength">Title too short!</div>
-                      <div *ngIf="addQuizForm.controls.title.errors.pattern">Only alphanumerical characters are allowed!</div>
-                  </div>
-                  <input type="text" class="funfact_title inputField" formControlName="title" />
-              </label>
-          </div>
-      </div>
-      <div class="contentSection">
+    <div class="funfact_header">
+      <h3 class="funfact_logo">Quiz</h3>
+      <div class="funfact_header_info">
         <label>
-            Short description:
-            <div *ngIf="submitted && addQuizForm.controls.shortDescription.errors" class="funfact_posting_error">
-                <div *ngIf="addQuizForm.controls.shortDescription.errors.required">Short description of the quiz is missing!</div>
-                <div *ngIf="addQuizForm.controls.shortDescription.errors.maxlength">Short description can have max 800 characters!</div>
-            </div>
-            <textarea formControlName="shortDescription" class="textField inputField"></textarea>
+          Title:
+          <div *ngIf="submitted && addQuizForm.controls.title.errors" class="funfact_posting_error">
+            <div *ngIf="addQuizForm.controls.title.errors.required">Title of the quiz is missing!</div>
+            <div *ngIf="addQuizForm.controls.title.errors.minlength">Title too short!</div>
+            <div *ngIf="addQuizForm.controls.title.errors.pattern">Only alphanumerical characters are allowed!</div>
+          </div>
+          <input type="text" class="funfact_title inputField" formControlName="title"/>
         </label>
+      </div>
     </div>
-      <div class="contentSection">
-          <label>
-              Description:
-              <div *ngIf="submitted && addQuizForm.controls.description.errors" class="funfact_posting_error">
-                  <div *ngIf="addQuizForm.controls.description.errors.required">Description of the quiz is missing!</div>
-                  <div *ngIf="addQuizForm.controls.description.errors.maxlength">Description can have max 800 characters!</div>
-              </div>
-              <textarea formControlName="description" class="contentTextArea inputField"></textarea>
-          </label>
-      </div>
+    <div class="contentSection">
+      <label>
+        Short description:
+        <div *ngIf="submitted && addQuizForm.controls.shortDescription.errors" class="funfact_posting_error">
+          <div *ngIf="addQuizForm.controls.shortDescription.errors.required">Short description of the quiz is missing!
+          </div>
+          <div *ngIf="addQuizForm.controls.shortDescription.errors.maxlength">Short description can have max 800
+            characters!
+          </div>
+        </div>
+        <textarea formControlName="shortDescription" class="textField inputField"></textarea>
+      </label>
+    </div>
+    <div class="contentSection">
+      <label>
+        Description:
+        <div *ngIf="submitted && addQuizForm.controls.description.errors" class="funfact_posting_error">
+          <div *ngIf="addQuizForm.controls.description.errors.required">Description of the quiz is missing!</div>
+          <div *ngIf="addQuizForm.controls.description.errors.maxlength">Description can have max 800 characters!</div>
+        </div>
+        <textarea formControlName="description" class="contentTextArea inputField"></textarea>
+      </label>
+    </div>
 
-      <div class="postingArea">
-          <label>
-              Tags :
-              <input type="text" formControlName="tags" class="inputField textField" />
-          </label>
-      </div>
+    <div class="postingArea">
+      <label>
+        Tags :
+        <input type="text" formControlName="tags" class="inputField textField"/>
+      </label>
+    </div>
 
-      <div class="funfact-post-btns">
-          <input type="button" routerLink="/tutorials" value="CANCEL" class="post_funfact_btn" />
-          <input type="submit" value="ADD QUIZ" class="post_funfact_btn" />          
-      </div>
+    <div class="funfact-post-btns">
+      <input type="button" routerLink="/tutorials" value="CANCEL" class="post_funfact_btn"/>
+      <input type="submit" value="ADD QUIZ" class="post_funfact_btn"/>
+    </div>
   </form>
 </div>

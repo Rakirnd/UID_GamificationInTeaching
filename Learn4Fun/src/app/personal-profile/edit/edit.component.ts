@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-edit',
@@ -7,17 +7,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EditComponent implements OnInit {
 
-  johnny = new EditProfile('John Doe', '', '', '' ,new Date("20/12/1996"),'','');
+  johnny = new EditProfile('John Doe', '', '', '', new Date('20/12/1996'), '', '');
 
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit() {
   }
 
 }
 
-export class EditProfile{
-  name: string
+export class EditProfile {
+  name: string;
   university: string;
   specialization: string;
   ocupation: string;
@@ -25,15 +26,15 @@ export class EditProfile{
   password: string;
   confirmPassword: string;
 
-  constructor(name:string, university: string, specialization:string, 
-    ocupation: string, dob:Date, password:string, confirmPassword:string){
-      this.name = name;
-      this.university = university;
-      this.specialization = specialization;
-      this.ocupation = ocupation;
-      this.dob = dob;
-      this.password = password;
-      this.confirmPassword = confirmPassword;
-    }
+  constructor(name: string, university: string, specialization: string,
+              ocupation: string, dob: Date, password: string, confirmPassword: string) {
+    this.name = name;
+    this.university = university;
+    this.specialization = specialization;
+    this.ocupation = ocupation;
+    this.dob = dob;
+    this.password = password;
+    this.confirmPassword = confirmPassword;
+  }
 
 }

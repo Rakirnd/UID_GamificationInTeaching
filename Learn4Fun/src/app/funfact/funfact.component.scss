@@ -1,150 +1,150 @@
 .funfact {
-    border: 3px solid black;
-    background: #59514c;
-    margin: 5px auto;
-    margin-bottom: 25px;
+  border: 3px solid black;
+  background: #59514c;
+  margin: 5px auto;
+  margin-bottom: 25px;
 }
 
 .funfact_header {
-    display: flex;
-    flex-direction: row;
-    width: 95%;
-    height: 15%;
-    margin: 5px 5px 20px 5px;
+  display: flex;
+  flex-direction: row;
+  width: 95%;
+  height: 15%;
+  margin: 5px 5px 20px 5px;
 }
 
 .funfact_logo {
-    width:25%;
-    height:100%;
-    color: #efc87c;
-    font-size: 66px;
-    font-family:Broadway;
-    text-align:center;
+  width: 25%;
+  height: 100%;
+  color: #efc87c;
+  font-size: 66px;
+  font-family: Broadway;
+  text-align: center;
 }
 
 .funfact_header_info {
-    width: 75%;
+  width: 75%;
 }
 
 .funfact_title {
-    width: 100%;
-    font-size: 72px;
-    text-align:center;
-    color: #7fbbbf;
-    font-weight: bold;
+  width: 100%;
+  font-size: 72px;
+  text-align: center;
+  color: #7fbbbf;
+  font-weight: bold;
 }
 
 .funfact_description {
-    width: 100%;
-    font-size: 18px;
-    font-style: italic;
-    text-align:center;
-    color: #7fbbbf;
+  width: 100%;
+  font-size: 18px;
+  font-style: italic;
+  text-align: center;
+  color: #7fbbbf;
 }
 
 .funfact_body {
-    display: flex;
-    flex-direction: row;
-    width: 99%;
-    height: 40%;
-    margin: 5px 5px 20px 5px;
-    margin-bottom: 50px;
+  display: flex;
+  flex-direction: row;
+  width: 99%;
+  height: 40%;
+  margin: 5px 5px 20px 5px;
+  margin-bottom: 50px;
 }
 
-.funfact_content{
-    width: 50%;
-    font-size: 18px;
-    text-align:justify;
-    margin-right: 10px;
-    color: #ebe1bf;
+.funfact_content {
+  width: 50%;
+  font-size: 18px;
+  text-align: justify;
+  margin-right: 10px;
+  color: #ebe1bf;
 }
 
 .funfact_visual {
-    width: 50%;
+  width: 50%;
 }
 
 .funfact_images {
-    width: 100%;
-    height: 40%;
-    margin: 0px 0px 20px 0px;
+  width: 100%;
+  height: 40%;
+  margin: 0px 0px 20px 0px;
 }
 
 #funfact_image1 {
-    width: 48%;
-    float: left;
-    height: 100%;
+  width: 48%;
+  float: left;
+  height: 100%;
 }
 
 #funfact_image2 {
-    width: 48%;
-    float: right;
-    height: 100%;
+  width: 48%;
+  float: right;
+  height: 100%;
 }
 
 .funfact_video {
-    width: 100%;
-    height: 60%;
+  width: 100%;
+  height: 60%;
 }
 
 .tags {
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    height: 5%;
-    margin-bottom: 20px;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 5%;
+  margin-bottom: 20px;
 }
 
 .comment_main {
-    display: flex;
-    flex-direction: row;
-    width: 60%;
-    margin-left: 5px;
-    border-radius: 25px;
-    border: 3px solid white;
-    margin-bottom: 20px;
-    background: #a4a09d;
+  display: flex;
+  flex-direction: row;
+  width: 60%;
+  margin-left: 5px;
+  border-radius: 25px;
+  border: 3px solid white;
+  margin-bottom: 20px;
+  background: #a4a09d;
 }
 
 .comment_reply {
-    display: flex;
-    flex-direction: row;
-    width: 60%;
-    margin-left: 100px;
-    border-radius: 25px;
-    border: 3px solid white;
-    margin-bottom: 20px;
-    background: #a4a09d;
+  display: flex;
+  flex-direction: row;
+  width: 60%;
+  margin-left: 100px;
+  border-radius: 25px;
+  border: 3px solid white;
+  margin-bottom: 20px;
+  background: #a4a09d;
 }
 
 .comment_userDetails {
-    width: 15%;
-    height: 100%;
-    text-align: center;
-    margin-bottom: 5px;
+  width: 15%;
+  height: 100%;
+  text-align: center;
+  margin-bottom: 5px;
 }
 
 .comment_pic {
-    width:100%;
-    height: 100%;
+  width: 100%;
+  height: 100%;
 }
 
 .comment_user {
-    color: #43241f;
-    font-weight: bold;
+  color: #43241f;
+  font-weight: bold;
 }
 
 .comment_text {
-    font-size: 22px;
+  font-size: 22px;
 }
 
-.funfact_feedback{
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    font-size: 15pt;
-    font-weight: bold;
-    height: 100%;
-    width: 100%;
+.funfact_feedback {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  font-size: 15pt;
+  font-weight: bold;
+  height: 100%;
+  width: 100%;
 }
 
 .funfact_likes {
@@ -164,74 +164,74 @@
 }
 
 .funfact_footer {
-    display: flex;
-    flex-direction: row;
-    width: 95%;
-    height: 15%;
-    margin: 5px 5px 20px 5px;
+  display: flex;
+  flex-direction: row;
+  width: 95%;
+  height: 15%;
+  margin: 5px 5px 20px 5px;
 }
 
 .funfact_comment_form {
-    width: 60%;
-    margin: 5px 5px 20px 5px;
+  width: 60%;
+  margin: 5px 5px 20px 5px;
 }
 
 .comment_message {
+  display: block;
+  font-size: 22px;
+
+  textarea {
     display: block;
+    width: 100%;
+    height: 60px;
+    border-radius: 25px;
+    border: 3px solid white;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    background: #a4a09d;
     font-size: 22px;
+    resize: none;
+    font-family: 'Comic Sans MS';
+    transition: ease-in-out, height .25s ease-in-out;
+  }
 
-    textarea {
-        display: block;
-        width: 100%;
-        height: 60px;
-        border-radius: 25px;
-        border: 3px solid white;
-        margin-top: 5px;
-        margin-bottom: 20px;
-        background: #a4a09d;
-        font-size: 22px;
-        resize: none;
-        font-family: 'Comic Sans MS';
-        transition: ease-in-out, height .25s ease-in-out;
-    }
-
-    textarea:focus {
-        background: #2F4F4F;
-        height: 120px;
-    }
+  textarea:focus {
+    background: #2F4F4F;
+    height: 120px;
+  }
 }
 
 .funfact_comment_submit_btn {
-    background: #9ACD32;
-    border: none;
-    color: white;
-    text-transform: uppercase;
-    border-radius: 4px;
-    padding: 1em;
-    cursor: pointer;
-    align-content: center;
-    font-family: 'Comic Sans MS';
+  background: #9ACD32;
+  border: none;
+  color: white;
+  text-transform: uppercase;
+  border-radius: 4px;
+  padding: 1em;
+  cursor: pointer;
+  align-content: center;
+  font-family: 'Comic Sans MS';
 }
 
 .funfact_comment_submit_btn:hover {
-    background: yellow;
+  background: yellow;
 }
 
 .funfact_submit_error {
-    background: #FFFF33;
-    padding: .5em;
-    font-size: 18px;
-    margin-bottom: 20px;
+  background: #FFFF33;
+  padding: .5em;
+  font-size: 18px;
+  margin-bottom: 20px;
 }
 
 .funfact_submit_success {
-    background: #9ACD32;
-    padding: .5em;
-    font-size: 18px;
-    margin-bottom: 20px;
+  background: #9ACD32;
+  padding: .5em;
+  font-size: 18px;
+  margin-bottom: 20px;
 }
 
-.add_button{
+.add_button {
   display: flex;
   justify-content: flex-end;
   background-color: green;
