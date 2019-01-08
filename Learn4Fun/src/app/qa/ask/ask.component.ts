@@ -1,9 +1,9 @@
-import { Component, OnInit } from '@angular/core';
-import { FormGroup } from '@angular/forms';
-import { FormBuilder } from '@angular/forms';
-import { Router } from '@angular/router';
-import { QuestionService } from '../service/question.service'
-import { QA } from '../qa.component'
+import {Component, OnInit} from '@angular/core';
+import {FormGroup} from '@angular/forms';
+import {FormBuilder} from '@angular/forms';
+import {Router} from '@angular/router';
+import {QuestionService} from '../service/question.service';
+import {QA} from '../qa.component';
 
 @Component({
   selector: 'app-ask',
@@ -15,7 +15,7 @@ export class AskComponent implements OnInit {
 
   addQuestionForm: FormGroup;
 
-  constructor(private formBuilder: FormBuilder, private questionService: QuestionService, private router: Router) { 
+  constructor(private formBuilder: FormBuilder, private questionService: QuestionService, private router: Router) {
 
   }
 

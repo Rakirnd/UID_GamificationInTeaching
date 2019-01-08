@@ -37,6 +37,7 @@ const routes: Routes = [
   {path: 'addQuiz', component: AddQuizComponent},
   {path: 'addSteps', component: AddStepsComponent},
   {path: 'view-tutorial', component: ViewComponent},
+  {path: 'tutorial-view', component: ViewComponent},
   {path: 'answer', component: AnswerComponent},
   {path: 'login', component: LoginComponent},
   {path: 'register', component: RegisterComponent},

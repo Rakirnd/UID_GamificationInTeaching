@@ -1,5 +1,5 @@
 <div class="button_add_div">
-  <button class="add_button" [routerLink]="['/addTutorial']">Add a new Tutorial!</button>
+  <button class="add_button" routerLink="/addTutorial">Add a new Tutorial!</button>
 </div>
 
 <div class="body">
@@ -7,15 +7,13 @@
   <div class="list" *ngFor="let tutorial of tutorials">
 
     <div class="list_presentation">
-      <div class="list_image">
-        <img alt="" width="100px" src="../../assets/images/cap.png"/>
-      </div>
-      
+      <div class="list_image"></div>
+
       <div class="list_text">
         <div class="list_title" style="cursor: pointer;" (click)="viewTutorial(tutorial)">{{tutorial.title}}</div>
         <div class="list_description">{{tutorial.shortDescription}}</div>
       </div>
-      
+
     </div>
 
     <div class="list_bottom">

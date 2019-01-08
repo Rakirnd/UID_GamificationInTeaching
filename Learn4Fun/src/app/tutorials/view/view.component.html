@@ -6,13 +6,13 @@
         <h2>{{tutorial.shortDescription}}</h2>
       </div>
       <div class="feedback">
-          <img alt="" src="../../../assets/images/like02.png"/>
-          <h3>{{tutorial.likeCount}}</h3>
-        </div>
-        <div class="feedback">
-          <img alt="" src="../../../assets/images/dislike3.png"/>
-          <h3>{{tutorial.dislikeCount}}</h3>
-        </div>                   
+        <img alt="" src="../../../assets/images/like02.png"/>
+        <h3>{{tutorial.likeCount}}</h3>
+      </div>
+      <div class="feedback">
+        <img alt="" src="../../../assets/images/dislike3.png"/>
+        <h3>{{tutorial.dislikeCount}}</h3>
+      </div>
     </div>
     <div class="detailed_description">
       <h3>{{tutorial.detailed_description}}
@@ -20,7 +20,9 @@
     </div>
   </div>
   <div class="video_div">
-      <iframe class="funfact_video" width="560" height="315" [src]='sanitizer.bypassSecurityTrustResourceUrl(tutorial.video)' frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <iframe class="funfact_video" width="560" height="315"
+            [src]='sanitizer.bypassSecurityTrustResourceUrl(tutorial.video)' frameborder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
   </div>
   <div class="steps">
     <div class="step" *ngFor="let step of tutorial.steps">
