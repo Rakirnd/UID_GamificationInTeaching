@@ -4,6 +4,7 @@ import { FormBuilder } from '@angular/forms';
 import { Validators } from '@angular/forms';
 import { FunFact } from '../../funfact/funfact.component';
 import { Tutorial } from '../../models/tutorial';
+import { UUID } from 'angular2-uuid';
 
 @Injectable({
   providedIn: 'root'
@@ -29,7 +30,8 @@ export class TutorialsService {
                 ['Angular', 'JS', 'technology'],
                 'DEVELOP ACROSS ALL PLATFORMS',
                 "https://www.youtube.com/embed/d9SWNLZvA8g",
-                []                
+                [],
+                "1"              
             )
         ];
         localStorage.setItem("tutorials", JSON.stringify(this.auxTutorials));
@@ -41,6 +43,14 @@ export class TutorialsService {
         this.tutorials = JSON.parse(localStorage.getItem("tutorials"));
         console.log("Get tutorials: ", this.tutorials);
         return this.tutorials;
+    }
+
+    getTutorialById(id: string) : Tutorial
+    {
+        this.tutorials = JSON.parse(localStorage.getItem("tutorials"));
+        let tutorial = this.tutorials.filter(t => t.id == id);
+        console.log("Get tutorials: ", tutorial);
+        return tutorial[0];
     }
 
     getSessionTutorial() {
@@ -59,8 +69,11 @@ export class TutorialsService {
     }
 
     addTutorial(tutorial: Tutorial) {
-      this.tutorials = JSON.parse(localStorage.getItem("tutorials"));
-      this.tutorials.push(tutorial);
-      localStorage.setItem("tutorials", JSON.stringify(this.tutorials));
+        console.log("here", tutorial);
+        let uuid = UUID.UUID();
+        tutorial.id=uuid;
+        this.tutorials = JSON.parse(localStorage.getItem("tutorials"));
+        this.tutorials.push(tutorial);
+        localStorage.setItem("tutorials", JSON.stringify(this.tutorials));
     }
 }

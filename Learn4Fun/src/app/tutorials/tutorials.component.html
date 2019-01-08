@@ -8,13 +8,14 @@
 
     <div class="list_presentation">
       <div class="list_image">
-        <img alt="" src="../../assets/images/cap.png"/>
+        <img alt="" width="100px" src="../../assets/images/cap.png"/>
       </div>
-
+      
       <div class="list_text">
-        <div class="list_title">{{tutorial.title}}</div>
+        <div class="list_title" style="cursor: pointer;" (click)="viewTutorial(tutorial)">{{tutorial.title}}</div>
         <div class="list_description">{{tutorial.shortDescription}}</div>
       </div>
+      
     </div>
 
     <div class="list_bottom">

@@ -34,7 +34,8 @@ const routes: Routes = [
   {path: 'addQuiz', component: AddQuizComponent},
   {path: 'addSteps', component: AddStepsComponent},
    {path: 'view-tutorial', component: ViewComponent},
-  {path: 'answer', component: AnswerComponent}
+  {path: 'answer', component: AnswerComponent},
+  {path:'tutorial-view', component: ViewComponent}
 ];
 
 @NgModule({
