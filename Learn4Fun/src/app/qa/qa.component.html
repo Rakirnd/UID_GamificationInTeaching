@@ -3,78 +3,36 @@
 </div>
 
 <div class="body">
+  <div class="list" *ngFor="let question of questions">
 
-  <div class="list">
-
-    <div class="list_presentation">
-      <div class="list_image">
-        <img alt="" src="../../assets/images/QA.png"/>
-      </div>
-
-      <div class="list_text">
-        <div class="list_title">{{javaArrays.title}}</div>
-        <div class="button_answer_div">
-          <button class="add_button" (click)="redirectToAnswer()">Answer Question</button>
+      <div class="list_presentation">
+        <div class="list_image">
+          <img alt="" src="../../assets/images/QA.png"/>
+        </div>
+        
+        <div class="list_text">
+          <div class="list_title" >{{question.title}}</div>
+          <div class="button_answer_div"><button class="add_button" (click)="redirectToAnswer()">Answer Question</button></div>
         </div>
       </div>
+  
+      <div class="list_bottom">
+        <div class="tags" *ngFor="let tag of question.tags">
+          <div class="tag">{{tag}}</div>
+        </div>
+  
+        <div class="feedback">
+          <div class="likes" [ngStyle]="{ 'background-image': likeImage, 'background-size': '85%'}">
+            <button class="feedbackButton" (click)="increaseLikes(question)"></button>
+          </div>
+          <div class="count">{{question.likeCount}}</div>
+  
+          <div class="likes" [ngStyle]="{ 'background-image': dislikeImage }">
+            <button class="feedbackButton" (click)="increaseDislikes(question)"></button>
+          </div>
+          <div class="count">{{question.dislikeCount}}</div>
+        </div>
+      </div>
+  
     </div>
-
-    <div class="list_bottom">
-      <div class="tags">
-        <div class="tag">{{javaArrays.tags[0]}}</div>
-        <div class="tag">{{javaArrays.tags[1]}}</div>
-      </div>
-
-      <div class="feedback">
-        <div class="likes" [ngStyle]="{ 'background-image': likeImage, 'background-size': '85%'}">
-          <button class="feedbackButton" (click)="increaseLikes(javaArrays)"></button>
-        </div>
-        <div class="count">{{javaArrays.likeCount}}</div>
-
-        <div class="likes" [ngStyle]="{ 'background-image': dislikeImage }">
-          <button class="feedbackButton" (click)="increaseDislikes(javaArrays)"></button>
-        </div>
-        <div class="count">{{javaArrays.dislikeCount}}</div>
-      </div>
-    </div>
-
-  </div>
-
-  <div class="list">
-
-    <div class="list_presentation">
-      <div class="list_image">
-        <img alt="" src="../../assets/images/QA.png"/>
-      </div>
-
-      <div class="list_text">
-        <div class="list_title">{{javaScriptBtn.title}}</div>
-        <div class="button_answer_div">
-          <button class="add_button">Answer Question</button>
-        </div>
-      </div>
-    </div>
-
-    <div class="list_bottom">
-      <div class="tags">
-        <div class="tag">{{javaScriptBtn.tags[0]}}</div>
-        <div class="tag">{{javaScriptBtn.tags[1]}}</div>
-      </div>
-
-      <div class="feedback">
-        <div class="likes" [ngStyle]="{ 'background-image': likeImage, 'background-size': '85%'}">
-          <button class="feedbackButton" (click)="increaseLikes(javaScriptBtn)"></button>
-        </div>
-        <div class="count">{{javaScriptBtn.likeCount}}</div>
-
-        <div class="likes" [ngStyle]="{ 'background-image': dislikeImage }">
-          <button class="feedbackButton" (click)="increaseDislikes(javaScriptBtn)"></button>
-        </div>
-        <div class="count">{{javaScriptBtn.dislikeCount}}</div>
-
-      </div>
-
-    </div>
-
-  </div>
 </div>
