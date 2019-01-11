@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 import {UserDT} from '../models/UserDT';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -17,7 +18,7 @@ export class LoginComponent implements OnInit {
 
   loginTry: UserDT = new UserDT();
 
-  constructor(private formBuilder: FormBuilder) {
+  constructor(private formBuilder: FormBuilder, private router: Router) {
 
   }
 
@@ -47,9 +48,11 @@ export class LoginComponent implements OnInit {
       if (this.loginTry.username === 'admin' && this.loginTry.password === 'admin') {
         this.success = true;
         this.errMessage = 'Login successful! Hello Admin!';
+        this.router.navigate(['']);
       } else if (this.loginTry.username === 'user' && this.loginTry.password === 'user123') {
         this.success = true;
         this.errMessage = 'Login successful! Hello User!';
+        this.router.navigate(['']);
       } else {
         this.success = false;
         this.errMessage = 'Invalid username or password!';
