@@ -59,4 +59,8 @@ export class AddQuizComponent implements OnInit {
     this.router.navigate(['quizzes']);
   }
 
+  addQuestion() {
+    localStorage.setItem('currentQuestion', JSON.stringify("1"));
+    this.router.navigate(['question']);
+  }
 }

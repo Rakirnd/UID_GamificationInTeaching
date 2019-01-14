@@ -19,6 +19,7 @@ import {AnswerComponent} from './qa/answer/answer.component';
 import {LoginComponent} from './login/login.component';
 import {PageNotFoundComponent} from './page-not-found/page-not-found.component';
 import {RegisterComponent} from './register/register.component';
+import { QuestionComponent } from './question/question.component';
 
 
 const routes: Routes = [
@@ -41,6 +42,7 @@ const routes: Routes = [
   {path: 'answer', component: AnswerComponent},
   {path: 'login', component: LoginComponent},
   {path: 'register', component: RegisterComponent},
+  {path: 'question', component: QuestionComponent},
   {path: '**', component: PageNotFoundComponent} // always keep this as last component in the list, please, or it will break the whole application
 ];
 

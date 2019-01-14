@@ -29,6 +29,8 @@ import {AnswerComponent} from './qa/answer/answer.component';
 import {LoginComponent} from './login/login.component';
 import {PageNotFoundComponent} from './page-not-found/page-not-found.component';
 import {RegisterComponent} from './register/register.component';
+import { QuestionComponent } from './question/question.component';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -54,13 +56,15 @@ import {RegisterComponent} from './register/register.component';
     AnswerComponent,
     LoginComponent,
     PageNotFoundComponent,
-    RegisterComponent
+    RegisterComponent,
+    QuestionComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    SlideshowModule
+    SlideshowModule,
+    FormsModule      
   ],
   providers: [],
   bootstrap: [AppComponent]
