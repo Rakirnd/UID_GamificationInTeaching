@@ -40,8 +40,8 @@ export class AddTutorialComponent implements OnInit {
     });
 
     // For keeping values for tutorial, when returning from add steps page
-    const tutorialSession = this.tutorialService.getSessionTutorial();
-    if (tutorialSession !== undefined) {
+    var tutorialSession = this.tutorialService.getSessionTutorial();
+    if (tutorialSession != undefined) {
       this.addTutorialForm.controls.title.setValue(tutorialSession.title);
       this.addTutorialForm.controls.description.setValue(tutorialSession.description);
       this.addTutorialForm.controls.shortDescription.setValue(tutorialSession.shortDescription);
@@ -53,7 +53,7 @@ export class AddTutorialComponent implements OnInit {
   onSubmit() {
     this.submitted = true;
     this.success = false;
-    const sessionTutorial = this.tutorialService.getSessionTutorial();
+    var sessionTutorial = this.tutorialService.getSessionTutorial();
     if (this.addTutorialForm.invalid || sessionTutorial == undefined) {
       return;
     }
