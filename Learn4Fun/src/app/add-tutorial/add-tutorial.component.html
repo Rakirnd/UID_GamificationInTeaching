@@ -7,7 +7,7 @@
         <label>
           Title:
           <div *ngIf="submitted && addTutorialForm.controls.title.errors" class="funfact_posting_error">
-            <div *ngIf="addTutorialForm.controls.title.errors.required">Title of the fun fact is missing!</div>
+            <div *ngIf="addTutorialForm.controls.title.errors.required">Title of the tutorial is missing!</div>
             <div *ngIf="addTutorialForm.controls.title.errors.minlength">Title too short!</div>
             <div *ngIf="addTutorialForm.controls.title.errors.pattern">Only alphanumerical characters are allowed!</div>
           </div>
@@ -33,7 +33,7 @@
       <label>
         Description:
         <div *ngIf="submitted && addTutorialForm.controls.description.errors" class="funfact_posting_error">
-          <div *ngIf="addTutorialForm.controls.description.errors.required">Description of the fun fact is missing!
+          <div *ngIf="addTutorialForm.controls.description.errors.required">Description of the tutorial is missing!
           </div>
           <div *ngIf="addTutorialForm.controls.description.errors.maxlength">Description can have max 800 characters!
           </div>

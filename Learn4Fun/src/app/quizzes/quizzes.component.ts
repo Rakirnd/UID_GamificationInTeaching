@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {QuizzesService} from './service/quizzes.service';
 import {Quiz} from '../models/Quiz';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-quizzes',
@@ -10,15 +11,12 @@ import {Quiz} from '../models/Quiz';
 export class QuizzesComponent implements OnInit {
 
   quizzes: Quiz[];
-  // quizzes
-  // javaMasterQuiz = new Quiz('Java Master', 'Prove you are a Java Master!', 100, 0, ['Java', 'OOP', 'Design Patterns']);
-  // cSharpGuruQuiz = new Quiz('C# Guru', 'Show the world you have a sharp mind!', 100, 0, ['C#', 'Web', '.Net']);
 
   // images
   likeImage = 'url(../../assets/images/like02.png)';
   dislikeImage = 'url(../../assets/images/dislike.png)';
 
-  constructor(private quizzesService: QuizzesService) {
+  constructor(private quizzesService: QuizzesService, private router: Router) {
     this.quizzes = quizzesService.getQuizzes();
   }
 
@@ -31,6 +29,11 @@ export class QuizzesComponent implements OnInit {
 
   increaseDislikes(quiz: Quiz) {
     quiz.dislikeCount++;
+  }
+
+  viewQuiz(quiz: Quiz) {
+    localStorage.setItem('currentQuiz', JSON.stringify(quiz));
+    this.router.navigate(['viewQuiz']);
   }
 
 }

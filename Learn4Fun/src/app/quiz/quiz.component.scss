@@ -1,0 +1,64 @@
+h1 {
+  text-align: center;
+  font-size: 3em;
+}
+
+.quiz_description {
+  text-align: center;
+  width: 60%;
+  margin: 0 auto;
+  font-size: 1.5em;
+}
+
+.question_section {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  margin: 0 auto;
+  height: 250px;
+}
+
+.question_text {
+  font-size: 1.25em;
+  margin: 1.5em auto 1.5em 0;
+}
+
+textarea {
+  width: 100%;
+  height: 125px;
+}
+
+.multiple_radio {
+  margin: 1em auto 0 2.5em;
+  font-size: 1em;
+}
+
+.blank_field {
+  font-family: 'Comic Sans MS', serif;
+  font-size: 0.75em;
+}
+
+.ctrl_buttons {
+  width: 100%;
+  display: inline-block;
+}
+
+.post_btn {
+  background: #9ACD32;
+  width: 25%;
+  margin-left: 60px;
+  margin-top: 50px;
+  margin-bottom: 20px;
+  border: none;
+  color: white;
+  text-transform: uppercase;
+  border-radius: 4px;
+  padding: 1em;
+  cursor: pointer;
+  align-content: center;
+  font-family: 'Comic Sans MS', serif;
+}
+
+.post_btn:hover {
+  background: yellow;
+}

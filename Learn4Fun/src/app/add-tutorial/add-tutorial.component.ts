@@ -54,7 +54,7 @@ export class AddTutorialComponent implements OnInit {
     this.submitted = true;
     this.success = false;
     const sessionTutorial = this.tutorialService.getSessionTutorial();
-    if (this.addTutorialForm.invalid || sessionTutorial === undefined) {
+    if (this.addTutorialForm.invalid || sessionTutorial == undefined) {
       return;
     }
 
@@ -78,7 +78,8 @@ export class AddTutorialComponent implements OnInit {
       this.addTutorialForm.controls.tags.value.split(' '),
       this.addTutorialForm.controls.shortDescription.value,
       this.addTutorialForm.controls.videoURL.value.replace('watch?v=', 'embed/'),
-      []
+      [],
+      '1'
     ));
     this.router.navigate(['addSteps']);
   }

@@ -21,6 +21,8 @@ export class AddQuizComponent implements OnInit {
 
   messageForm: FormGroup;
 
+  quiz: Quiz;
+
   constructor(private formBuilder: FormBuilder, private quizService: QuizzesService, private router: Router) {
 
   }
@@ -38,7 +40,8 @@ export class AddQuizComponent implements OnInit {
     });
   }
 
-  onSubmit() {
+  addQuestion() {
+
     this.submitted = true;
     this.success = false;
     if (this.addQuizForm.invalid) {
@@ -47,20 +50,18 @@ export class AddQuizComponent implements OnInit {
 
     this.success = true;
     this.submitted = false;
-    console.log('here');
-    this.quizService.addQuiz(new Quiz(
+
+    this.quiz = new Quiz(
       this.addQuizForm.controls.title.value,
       this.addQuizForm.controls.description.value,
       0,
       0,
       this.addQuizForm.controls.tags.value.split(' '),
       this.addQuizForm.controls.shortDescription.value
-    ));
-    this.router.navigate(['quizzes']);
-  }
+    );
 
-  addQuestion() {
-    localStorage.setItem('currentQuestion', JSON.stringify("1"));
+    localStorage.setItem('currentQuestion', JSON.stringify('1'));
     this.router.navigate(['question']);
   }
+
 }

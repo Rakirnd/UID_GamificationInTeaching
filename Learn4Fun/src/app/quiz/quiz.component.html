@@ -1,0 +1,40 @@
+<h1>{{quiz.title}}</h1>
+
+<div class="quiz_description">{{quiz.description}}</div>
+
+<div *ngFor="let faq of quiz.freeAnswerQuestions" class="question_section">
+  <div class="question_text">{{faq.id}}. {{faq.question}}</div>
+  <label>
+    Your Answer: <br>
+    <textarea></textarea>
+  </label>
+</div>
+
+<div *ngFor="let mcq of quiz.multipleChoiceQuestions" class="question_section">
+  <div class="question_text">{{mcq.id}}. {{mcq.question}}</div>
+
+  <form>
+    <input class="multiple_radio" type="radio" name="question" value="A">{{mcq.choices[0]}}<br>
+    <input class="multiple_radio" type="radio" name="question" value="B">{{mcq.choices[1]}}<br>
+    <input class="multiple_radio" type="radio" name="question" value="C">{{mcq.choices[2]}}<br>
+  </form>
+</div>
+
+<div *ngFor="let fbq of quiz.fillBlanksQuestions" class="question_section">
+
+  <div class="question_text">
+    <p>
+      {{fbq.id}}. {{fbq.question[0]}}
+      <input class="blank_field" type="text"/>
+      {{fbq.question[1]}}
+      <input class="blank_field" type="text"/>,
+      <input class="blank_field" type="text"/>,
+      <input class="blank_field" type="text"/>.
+    </p>
+  </div>
+</div>
+
+<div class="ctrl_buttons">
+  <input type="button" value="CANCEL" class="post_btn" routerLink="/quizzes"/>
+  <input type="button" value="SUBMIT" class="post_btn" routerLink="/global-ranking"/>
+</div>

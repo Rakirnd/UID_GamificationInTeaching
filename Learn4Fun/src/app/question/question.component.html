@@ -1,44 +1,63 @@
 <div class="body">
 
-    <div class="funfact_header">
-      <h3 class="funfact_logo">QUESTION {{questionNumber}}</h3>      
-    </div>
-   <div>
-      <label>Summary: </label>
-
-      <select [(ngModel)]="selectedQuestion" (change)="changeQuestionTypes($event)">
-          <option *ngFor="let questionType of questionTypes" [ngValue]="questionType">{{questionType}}</option>
-      </select>
-     
+  <div class="funfact_header">
+    <h3 class="funfact_logo">QUESTION {{questionNumber}}</h3>
   </div>
-    <div *ngIf="isFreeAnswer || isMultipleChoice" class="contentSection">      
-        <label for="description">Type your question bellow</label>
-        <input type="text" class="contentTextArea inputField" id="description" required value="{{description}}">
-    </div>
 
-    <div *ngIf="isMultipleChoice" class="contentSection">      
-        <label for="question">Type the options</label>
-        <br />
-        A <input type="text" class="inputField" id="question1" required value="{{description}}">
-        <br />
-        B <input type="text" class="inputField" id="question2" required value="{{description}}">
-        <br />
-        C <input type="text" class="inputField" id="question3" required value="{{description}}">
-    </div>
-    
-    <div *ngIf="isFillBlanks" class="contentSection">    
-        <p>TYPE THE TEXT</p>  
-        <label for="text">Type your question bellow</label>
-        <input type="text" class="contentTextArea inputField" id="text" required value="{{description}}">
+  <div>
+    <label>Summary: </label>
 
-        <p>TYPE THE CORRECT ANSWERS</p>  
-        <label for="answer">For each of the blanks type the corresponding right answer on a new line</label>
-        <input type="answer" class="contentTextArea inputField" id="answer" required value="{{description}}">
-    </div>
+    <select [(ngModel)]="selectedQuestion" (change)="changeQuestionTypes($event)">
+      <option *ngFor="let questionType of questionTypes" [ngValue]="questionType">{{questionType}}</option>
+    </select>
 
-    <div class="funfact-post-btns">
-      <input type="button" (click)="addNextQuestion()" value="ADD ANOTHER QUESTION" class="post_funfact_btn"/>
-      <input type="submit" value="DONE" class="post_funfact_btn"/>
-    </div>
+  </div>
+
+  <div *ngIf="isFreeAnswer || isMultipleChoice" class="contentSection">
+    <label for="description">Type your question below</label>
+    <input type="text" class="contentTextArea inputField" id="description" required value="{{description}}">
+  </div>
+
+  <div *ngIf="isMultipleChoice" class="contentSection">
+
+    <div>Type the options</div>
+
+    <form>
+
+      <input type="radio" name="question" value="A">
+        <label for="question1">A </label>
+          <input type="text"  class="inputField" id="question1" required value="{{description}}"/>
+      <br>
+
+      <input type="radio" name="question" value="A">
+        <label for="question2">B </label>
+          <input type="text" class="inputField" id="question2" required value="{{description}}"/>
+      <br>
+
+      <input type="radio" name="question" value="A">
+        <label for="question3">C </label>
+          <input type="text" class="inputField" id="question3" required value="{{description}}"/>
+      <br>
+
+    </form>
+
+  </div>
+
+  <div *ngIf="isFillBlanks" class="contentSection">
+    <p>TYPE THE TEXT</p>
+    <label for="text">Type your question bellow</label>
+    <input type="text" class="contentTextArea inputField" id="text" required value="{{description}}">
+
+    <p>TYPE THE CORRECT ANSWERS</p>
+    <label for="answer">For each of the blanks type the corresponding right answer on a new line</label>
+    <input type="text" class="contentTextArea inputField" id="answer" required value="{{description}}">
+  </div>
+
+  <div class="funfact-post-btns">
+    <input type="button" (click)="previousQuestion()" value="BACK" class="post_funfact_btn"/>
+    <input *ngIf="questionNumber < numberOfQuestions.toString()" type="button" (click)="nextQuestion()" value="NEXT QUESTION" class="post_funfact_btn"/>
+    <input *ngIf="questionNumber === numberOfQuestions.toString()" type="button" (click)="addNextQuestion()" value="ADD ANOTHER QUESTION" class="post_funfact_btn"/>
+    <input type="submit" value="DONE" class="post_funfact_btn"/>
+  </div>
 
 </div>

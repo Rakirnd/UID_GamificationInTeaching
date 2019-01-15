@@ -1,71 +1,70 @@
 .funfact_form {
-    border: 3px solid black;
-    margin: 5px auto;
-    margin-bottom: 25px;
-  }
-  
-  .inputField {
-    font-family: 'Comic Sans MS';
-    resize: none;
-  }
-  
-  .contentSection {
-    width: 95%;
-    margin-left: 7px;
-  }
-  
-  .descriptionSection {
-    width: 95%;
-    margin-left: 7px;
-  }
-  
-  .contentTextArea {
-    width: 100%;
-    height: 200px;
-    font-size: 18px;
-    text-align: justify;
-    margin-bottom: 20px;
-  }
-  
-  .postingArea {
-    width: 95%;
-    margin-left: 7px;
-    margin-bottom: 20px;
-  }
-  
-  .textField {
-    width: 95%;
-  }
-  
-  .funfact_posting_error {
-    background: #FFFF33;
-    padding: .5em;
-    font-size: 12px;
-    width: 40%;
-  }
-  
-  .funfact-post-btns {
-    width: 100%;
-    display: inline-block;
-  }
-  
-  .post_funfact_btn {
-    background: #9ACD32;
-    width: 25%;
-    margin-left: 60px;
-    margin-top: 50px;
-    margin-bottom: 20px;
-    border: none;
-    color: white;
-    text-transform: uppercase;
-    border-radius: 4px;
-    padding: 1em;
-    cursor: pointer;
-    align-content: center;
-    font-family: 'Comic Sans MS';
-  }
-  
-  .post_funfact_btn:hover {
-    background: yellow;
-  }
-  
+  border: 3px solid black;
+  margin: 5px auto;
+  margin-bottom: 25px;
+}
+
+.inputField {
+  font-family: 'Comic Sans MS', serif;
+  resize: none;
+}
+
+.contentSection {
+  width: 95%;
+  margin-left: 7px;
+}
+
+.descriptionSection {
+  width: 95%;
+  margin-left: 7px;
+}
+
+.contentTextArea {
+  width: 100%;
+  height: 200px;
+  font-size: 18px;
+  text-align: justify;
+  margin-bottom: 20px;
+}
+
+.postingArea {
+  width: 95%;
+  margin-left: 7px;
+  margin-bottom: 20px;
+}
+
+.textField {
+  width: 95%;
+}
+
+.funfact_posting_error {
+  background: #FFFF33;
+  padding: .5em;
+  font-size: 12px;
+  width: 40%;
+}
+
+.funfact-post-btns {
+  width: 100%;
+  display: inline-block;
+}
+
+.post_funfact_btn {
+  background: #9ACD32;
+  width: 25%;
+  margin-left: 60px;
+  margin-top: 50px;
+  margin-bottom: 20px;
+  border: none;
+  color: white;
+  text-transform: uppercase;
+  border-radius: 4px;
+  padding: 1em;
+  cursor: pointer;
+  align-content: center;
+  font-family: 'Comic Sans MS', serif;
+}
+
+.post_funfact_btn:hover {
+  background: yellow;
+}

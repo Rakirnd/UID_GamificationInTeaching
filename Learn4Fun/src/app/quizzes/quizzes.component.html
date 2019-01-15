@@ -4,7 +4,7 @@
 
 <div class="body">
 
-  <div class="list" *ngFor="let quiz of quizzes">
+  <div class="list" *ngFor="let quiz of quizzes" (click)="viewQuiz(quiz)">
 
     <div class="list_presentation">
       <div class="list_image"></div>

@@ -12,7 +12,7 @@ import {QaComponent} from './qa/qa.component';
 import {FooterComponent} from './footer/footer.component';
 import {SlideshowModule} from 'ng-simple-slideshow';
 
-import {ReactiveFormsModule} from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {FunfactComponent} from './funfact/funfact.component';
 
 import {PersonalProfileComponent} from './personal-profile/personal-profile.component';
@@ -29,9 +29,8 @@ import {AnswerComponent} from './qa/answer/answer.component';
 import {LoginComponent} from './login/login.component';
 import {PageNotFoundComponent} from './page-not-found/page-not-found.component';
 import {RegisterComponent} from './register/register.component';
-import { QuestionComponent } from './question/question.component';
-import { FormsModule } from '@angular/forms';
-
+import {QuestionComponent} from './question/question.component';
+import {QuizComponent} from './quiz/quiz.component';
 
 @NgModule({
   declarations: [
@@ -57,14 +56,15 @@ import { FormsModule } from '@angular/forms';
     LoginComponent,
     PageNotFoundComponent,
     RegisterComponent,
-    QuestionComponent
+    QuestionComponent,
+    QuizComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
     SlideshowModule,
-    FormsModule      
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
