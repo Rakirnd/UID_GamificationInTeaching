@@ -1,0 +1,50 @@
+h1 {
+  text-align: center;
+  font-size: 3em;
+}
+
+.ctrl_buttons {
+  width: 100%;
+  display: inline-block;
+  margin: 1em auto;
+}
+
+.post_btn {
+  background: #9ACD32;
+  width: 25%;
+  margin-left: 60px;
+  margin-top: 50px;
+  margin-bottom: 20px;
+  border: none;
+  color: white;
+  text-transform: uppercase;
+  border-radius: 4px;
+  padding: 1em;
+  cursor: pointer;
+  align-content: center;
+  font-family: 'Comic Sans MS', serif;
+}
+
+.awards {
+  display: flex;
+  flex-direction: row;
+}
+
+.award {
+  display: flex;
+  flex-direction: column;
+  height: 4cm;
+  width: 3cm;
+  margin-right: 1cm;
+}
+
+.post_btn:hover {
+  background: yellow;
+}
+
+.body_div{
+  width: 80%;
+  margin: 0 auto;
+  font-size: 1.25em;
+  font-weight: bold;
+}

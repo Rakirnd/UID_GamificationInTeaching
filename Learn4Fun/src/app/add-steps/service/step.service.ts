@@ -10,7 +10,7 @@ export class StepService {
 
   constructor() {
     this.steps = JSON.parse(localStorage.getItem('steps'));
-    if (this.steps === undefined || this.steps === [] || this.steps.length === 0) {
+    if (this.steps == undefined || this.steps === [] || this.steps.length === 0) {
       const auxSteps = [new Step('STEP_AUX', 'The first step is to try')];
       localStorage.setItem('steps', JSON.stringify(auxSteps));
     }

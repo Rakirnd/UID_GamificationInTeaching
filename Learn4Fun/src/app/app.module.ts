@@ -31,6 +31,7 @@ import {PageNotFoundComponent} from './page-not-found/page-not-found.component';
 import {RegisterComponent} from './register/register.component';
 import {QuestionComponent} from './question/question.component';
 import {QuizComponent} from './quiz/quiz.component';
+import { ScorePageComponent } from './score-page/score-page.component';
 
 @NgModule({
   declarations: [
@@ -57,7 +58,8 @@ import {QuizComponent} from './quiz/quiz.component';
     PageNotFoundComponent,
     RegisterComponent,
     QuestionComponent,
-    QuizComponent
+    QuizComponent,
+    ScorePageComponent
   ],
   imports: [
     BrowserModule,

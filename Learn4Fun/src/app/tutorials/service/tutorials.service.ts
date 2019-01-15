@@ -24,7 +24,7 @@ export class TutorialsService {
           0,
           ['Angular', 'JS', 'technology'],
           'DEVELOP ACROSS ALL PLATFORMS',
-          'https://www.youtube.com/embed/d9SWNLZvA8g',
+          'https://www.youtube.com/embed/5wtnKulcquA',
           [new Step("Step1: Install the Angular CLI.", "To install the CLI using npm, open a terminal/console window and enter the following command: npm install -g @angular/cli"),
             new Step("Step 2: Create a workspace and initial application", "Run the CLI command ng new and provide the name my-app, as shown here: ng new my-app"),
            new Step("Step 3: Serve the application", "Launch the server by using the CLI command ng serve, with the --open option.") ],

@@ -18,7 +18,10 @@
 
 .list_image {
   width: 25%;
-  height: 100%;
+  background: url("../../assets/images/QA.png");
+  background-size: 165px 125px;
+  background-position: center center;
+  background-repeat: no-repeat;
   display: flex;
   flex-direction: row;
 }
